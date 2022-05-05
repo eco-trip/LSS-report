@@ -1,5 +1,5 @@
 defaults:
-  - ./src/index
+  - ./src/index.yml
 
 # common configuration
 from: markdown

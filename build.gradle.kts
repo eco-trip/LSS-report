@@ -9,7 +9,7 @@ repositories {
 
 spotless {
     format("styling") {
-        target("docs/*.md")
+        target("src/*.md")
         prettier().configFile(rootDir.absolutePath + "/.prettierrc.yml")
     }
 }
