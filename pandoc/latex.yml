@@ -1,0 +1,29 @@
+defaults:
+  - ./src/index
+
+# common configuration
+from: markdown
+table-of-contents: true
+toc-depth: 3
+number-sections: true
+top-level-division: chapter
+
+filters:
+  - pandoc-crossref
+
+metadata:
+  title: EcoTrip
+  subtitle: LSS Report
+  lang: it-IT
+  author:
+    - Alan Mancini
+    - Alberto Marfoglia
+    - Matteo Brocca
+  autoSectionLabels: true
+  chapters: true
+  classoption:
+    - oneside
+
+#
+output-file: LSSReport.pdf
+resource-path: ['./src']
