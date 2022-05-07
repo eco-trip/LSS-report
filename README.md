@@ -4,7 +4,7 @@ Ecotrip è un sistema che incentiva la sostenibilità nel settore alberghiero
 stimolando direttamente gli ospiti a un corretto comportamento grazie alla gamification.
 
 Il presente progetto è stato commissionato da un cliente reale che opera con alcuni partner 
-in America progettando e costruendo nuove strutture alberghiere.
+negli USA progettando e costruendo nuove strutture alberghiere.
 
 Abbiamo lavorato a stretto contatto con il cliente sin dalle prime fasi di knowlegde crunching
 e design fino alla consegna del prototipo, di seguito illustreremo passo passo 
@@ -16,7 +16,7 @@ La sostenibilità in Europa è un tema molto sentito anche nel settore alberghie
 sono presenti sistemi e centraline che permettono di ridurre gli sprechi energetici andando
 ad esempio a spegnere gli impianti elettrici quando l'ospite esce dalla sua camera.
 
-In America invece la maggior parte degli hotel non dispone di questi semplici meccanismi e l'utenza
+Negli USA invece la maggior parte degli hotel non dispone di questi semplici meccanismi e l'utenza
 è molto meno attenta al problema eco sostenibilità.
 Un esempio banale di spreco energetico che risulta essere un comportamento diffuso, 
 avviene quando in estate un ospite esce dalla camera lasciando il condizionatore acceso a temperature molto basse 
