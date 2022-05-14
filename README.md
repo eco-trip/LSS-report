@@ -10,5 +10,5 @@ Abbiamo lavorato a stretto contatto con il cliente sin dalle prime fasi di knowl
 e design fino alla consegna del prototipo, di seguito illustreremo passo passo 
 il problema e la nostra soluzione.
 
-[Contesto e obiettivo](src/context-goal.md)
-[Knowledge krunching](src/knowledge-crunching.md)
+- [Contesto e obiettivo](src/context-goal.md)
+- [Knowledge krunching](src/knowledge-crunching.md)
