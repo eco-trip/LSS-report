@@ -52,7 +52,7 @@ l'account dell'albergatore.
 
 L'albergatore potrà quindi accedere al pannello di controllo e, per ciascuna
 delle sue camere, visualizzare i dati istantanei raccolti dai sensori ed
-indicare i momenti di checkin e checkout di un ospite: quest'ultima funzione
+indicare i momenti di check-in e check-out di un ospite: quest'ultima funzione
 manuale, in ottica di sviluppo futuro, sarà automatizzabile con la connessione
 del pannello di controllo al gestionale dell'albergo.
 
@@ -69,11 +69,11 @@ periodo estivo di giorno tende aperte e condizionatore acceso a pieno regime.
 L'ospite attraverso l'app Ecotrip può visualizzare i dati del suo pernottamento
 corrente e di quelli passati, comprendenti sia i dati sintetizzati, che il
 consumo CO2 ed il punteggio "sostenibilità" aggiornati in tempo reale. Può anche
-visualizzare i dati istantanei ma solo fino al momento del checkout.
+visualizzare i dati istantanei ma solo fino al momento del check-out.
 
 Al fine di permettere all'ospite di collegarsi facilmente ed autonomamente ai
 dati del proprio pernottamento, a quest'ultimo viene associato un token univoco,
-cioè un codice randomico generato al momento del checkin, ed inviato alla
+cioè un codice randomico generato al momento del check-in, ed inviato alla
 centralina della relativa camera. Alla centralina è collegato un transponder NFC
 che deve essere installato nella camera in modo che sia visibile agli ospiti,
 magari identificabile con il logo di Ecotrip. Quando un ospite avvicina al
