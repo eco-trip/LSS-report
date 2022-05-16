@@ -56,23 +56,23 @@ indicare i momenti di check-in e check-out di un ospite: quest'ultima funzione
 manuale, in ottica di sviluppo futuro, sarà automatizzabile con la connessione
 del pannello di controllo al gestionale dell'albergo.
 
-Per ogni pernottamento, cioè il periodo tra il check-in ed il check-out di
-ospite, saranno visualizzabili oltre che i dati sintetizzati, anche il consumo
-totale di CO2 ed il punteggio "sostenibilità" ottenuto. Il calcolo della CO2
-viene fatto considerando il consumo energetico, comprensivo di quello stimato
-per il riscaldamento della camera e dell'acqua, e la provenienza dell'energia
-usata dall'hotel. Il punteggio "sostenibilità" tiene conto, non solo della CO2
-totale, ma anche del comportamento tenuto dall'ospite durante la sua permanenza:
-ad esempio deve essere penalizzato il fatto di uscire dalla camera lasciando in
+Per ogni soggiorno, cioè il periodo tra il check-in ed il check-out di ospite,
+saranno visualizzabili oltre che i dati sintetizzati, anche il consumo totale di
+CO2 ed il punteggio "sostenibilità" ottenuto. Il calcolo della CO2 viene fatto
+considerando il consumo energetico, comprensivo di quello stimato per il
+riscaldamento della camera e dell'acqua, e la provenienza dell'energia usata
+dall'hotel. Il punteggio "sostenibilità" tiene conto, non solo della CO2 totale,
+ma anche del comportamento tenuto dall'ospite durante la sua permanenza: ad
+esempio deve essere penalizzato il fatto di uscire dalla camera lasciando in
 periodo estivo di giorno tende aperte e condizionatore acceso a pieno regime.
 
-L'ospite attraverso l'app Ecotrip può visualizzare i dati del suo pernottamento
+L'ospite attraverso l'app Ecotrip può visualizzare i dati del suo soggiorno
 corrente e di quelli passati, comprendenti sia i dati sintetizzati, che il
 consumo CO2 ed il punteggio "sostenibilità" aggiornati in tempo reale. Può anche
 visualizzare i dati istantanei ma solo fino al momento del check-out.
 
 Al fine di permettere all'ospite di collegarsi facilmente ed autonomamente ai
-dati del proprio pernottamento, a quest'ultimo viene associato un token univoco,
+dati del proprio soggiorno, a quest'ultimo viene associato un token univoco,
 cioè un codice casuale generato al momento del check-in, ed inviato alla
 centralina della relativa camera. Alla centralina è collegato un transponder NFC
 che deve essere installato nella camera in modo che sia visibile agli ospiti,
@@ -80,7 +80,7 @@ magari identificabile con il logo di Ecotrip. Quando un ospite avvicina al
 transponder della centralina il proprio smartphone provvisto di NFC, questo
 riceve indicazioni per avviare automaticamente l'app Ecotrip con il token come
 parametro: da questo momento l'app memorizzerà il token e permetterà di
-visualizzare i dati del pernottamento richiedendoli ad un servizio remoto.
+visualizzare i dati del soggiorno richiedendoli ad un servizio remoto.
 L'operazione di collegamento token-app può essere fatta una sola volta e solo
 prima del check-out, questo garantisce sicurezza e privacy riducendo il rischio
 di violazioni di accesso ai dati.
