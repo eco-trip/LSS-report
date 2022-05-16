@@ -40,9 +40,11 @@ prevediamo invece due possibilità:
   la porta viene chiusa.
 
 La centralina è connessa alla rete wifi dell'hotel ed ha accesso ad Internet,
-questa campionerà ogni X secondi i dati da tutti i sensori e li invierà ad un
-archivio remoto. Una volta installata, prima di poter inviare i dati, la
-centralina deve essere abbinata con l'hotel ed un numero di camera.
+all'avvio stabilisce una connessione con un servizio remoto al fine di rendersi
+configurabile a distanza. Una volta installata, la centralina deve essere
+abbinata con l'hotel ed un numero di camera. Dopo l'abbinamento questa
+campionerà ogni X secondi i dati da tutti i sensori e li invierà al servizio
+remoto.
 
 Al fine di fornire le funzioni di abbinamento e monitoraggio dati, sarà
 predisposto un pannello di controllo: qui gli amministratori di Ecotrip potranno
@@ -56,7 +58,7 @@ indicare i momenti di check-in e check-out di un ospite: quest'ultima funzione
 manuale, in ottica di sviluppo futuro, sarà automatizzabile con la connessione
 del pannello di controllo al gestionale dell'albergo.
 
-Per ogni soggiorno, cioè il periodo tra il check-in ed il check-out di ospite,
+Per ogni soggiorno, cioè il periodo tra il check-in ed il check-out dell'ospite,
 saranno visualizzabili oltre che i dati sintetizzati, anche il consumo totale di
 CO2 ed il punteggio "sostenibilità" ottenuto. Il calcolo della CO2 viene fatto
 considerando il consumo energetico, comprensivo di quello stimato per il
