@@ -22,7 +22,7 @@ L'obiettivo del nostro cliente è quello di proporre all'alleanza sopracitata
 Ecotrip, un nuovo sistema che incentivi direttamente gli ospiti a tenere un
 corretto comportamento. Il sistema è composto da un app che l'ospite può
 utilizzare per visualizzare i consumi della sua stanza ed ottenere un punteggio
-"sostenibilità" opportumanente calcolato tenendo conto di vari fattori. Per
+"sostenibilità" opportunamente calcolato tenendo conto di vari fattori. Per
 monitorare i consumi il sistema comprende una centralina, da installare per ogni
 stanza dell'albergo, che raccoglie i dati attraverso diversi sensori e li carica
 sul cloud.
