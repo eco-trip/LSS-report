@@ -73,7 +73,7 @@ visualizzare i dati istantanei ma solo fino al momento del check-out.
 
 Al fine di permettere all'ospite di collegarsi facilmente ed autonomamente ai
 dati del proprio pernottamento, a quest'ultimo viene associato un token univoco,
-cioè un codice randomico generato al momento del check-in, ed inviato alla
+cioè un codice casuale generato al momento del check-in, ed inviato alla
 centralina della relativa camera. Alla centralina è collegato un transponder NFC
 che deve essere installato nella camera in modo che sia visibile agli ospiti,
 magari identificabile con il logo di Ecotrip. Quando un ospite avvicina al
@@ -83,7 +83,7 @@ parametro: da questo momento l'app memorizzerà il token e permetterà di
 visualizzare i dati del pernottamento richiedendoli ad un servizio remoto.
 L'operazione di collegamento token-app può essere fatta una sola volta e solo
 prima del check-out, questo garantisce sicurezza e privacy riducendo il rischio
-di violazioni di accesso ai dati. Tramite l'app è
+di violazioni di accesso ai dati.
 
 Al check-out è possibile calcolare uno sconto in base alla CO2 risparmiata
 rispetto a valori obiettivo e/o in base al punteggio "sostenibilità" ottenuto.
