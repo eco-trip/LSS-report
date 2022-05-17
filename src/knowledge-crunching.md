@@ -89,3 +89,35 @@ di violazioni di accesso ai dati.
 
 Al check-out è possibile calcolare uno sconto in base alla CO2 risparmiata
 rispetto a valori obiettivo e/o in base al punteggio "sostenibilità" ottenuto.
+
+## User stories
+
+Tra le user stories identificabili, quelle reltive al checkin/checkout e
+autorizzazione dell'ospite mediante token risultano essere poco banali, le
+abbiamo quindi approfondite con l'esperto di dominio.
+
+In ordine:
+
+- l'albergatore esegue il checkin dell'ospite impostando un nuovo soggiorno per
+  una camera
+- un nuovo token relativo al soggiorno viene generato
+- il token viene inviato alla centralina della camera
+- l'ospite, una volta entrato nella camera, esegue il tap con il suo cellulare
+  sul transponder NFC della centralina
+- la centralina comunica al cellulare di aprire l'app indicando il token del
+  soggiorno
+- l'ospite visualizza tramite app i dati del soggiorno
+
+![User story](./images/guest-authorization-story.svg)
+
+## Use cases
+
+Di seguito riassumiamo i casi d'uso raggruppati in base al contesto
+
+![control panel use case](./images/control-panel-use-case.svg)
+
+![guest use case](./images/guest-authorization-use-case.svg)
+
+![room monitoring case](./images/room-monitoring-use-case.svg)
+
+![app use case](./images/app-use-case.svg)
