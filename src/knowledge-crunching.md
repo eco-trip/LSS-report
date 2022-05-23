@@ -121,3 +121,37 @@ Di seguito riassumiamo i casi d'uso raggruppati in base al contesto
 ![room monitoring case](./images/room-monitoring-use-case.svg)
 
 ![app use case](./images/app-use-case.svg)
+
+## Subdomains
+
+Abbiamo identificato 4 sottodomini del dominio.
+
+![subdomains](./images/subdomains.png)
+
+Administration: comprende le funzionalità di amministrazione generale mediante
+apposito pannello di controllo, ovvero la configurazione di nuovi hotel, account
+utente/hotelier e centraline.
+
+Stay Management: riassume i vari use case relativi alla gestione del soggiorno
+da parte dell'hotelier compreso check-in, check-out ed il calcolo del punteggio
+sostenibilità.
+
+Room Monitoring: comprende i sistemi e la sonsoristica necessari per la raccolta
+e lo stoccaggio in cloud dei dati delle stanze degli hotel.
+
+Guest Authorization: include il processo di generazione del token per un nuovo
+soggiorno ed il suo trasferimento alla centralina e successivamente allo
+smartphone mediante transponder NFC, permettendo così all'ospite di accedere ai
+dati del suo soggiorno.
+
+Guest App: include la visualizzazione dei dati della camera e del soggiorno
+tramite applicativo fruibile dagli ospiti, inoltre implementa gli aspetti di
+gamification.
+
+Di seguito il core domain chart dove mostriamo che secondo la nostra analisi i
+sottodomini centrali di ecotrip sono il monitoraggio della stanza, la gestione
+dei soggiorni con l'elaborazione dati e l'app per l'ospite. Consideriamo però
+l'app uno short-term core, in quanto il concetto di gamification potrebbe essere
+ripreso da altri in altri modi e quindi perdere di differenziazione nel mercato.
+
+![subdomains](./images/core-domain-chart.png)
