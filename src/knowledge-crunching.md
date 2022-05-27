@@ -130,14 +130,14 @@ Abbiamo identificato 4 sottodomini del dominio.
 
 Administration: comprende le funzionalità di amministrazione generale mediante
 apposito pannello di controllo, ovvero la configurazione di nuovi hotel, account
-utente/hotelier e centraline.
-
-Stay Management: riassume i vari use case relativi alla gestione del soggiorno
-da parte dell'hotelier compreso check-in, check-out ed il calcolo del punteggio
-sostenibilità.
+utente/hotelier e centraline. Comprende anche la gestione dei soggiorni con
+check-in e check-out da parte dell'hotelier.
 
 Room Monitoring: comprende i sistemi e la sonsoristica necessari per la raccolta
 e lo stoccaggio in cloud dei dati delle stanze degli hotel.
+
+Data Elaboration: comprende il calcolo della stima dei consumi C02 e del
+puntenggio "sostenibilità" relativo ai soggiorni.
 
 Guest Authorization: include il processo di generazione del token per un nuovo
 soggiorno ed il suo trasferimento alla centralina e successivamente allo
