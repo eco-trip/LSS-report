@@ -70,8 +70,7 @@ periodo estivo di giorno tende aperte e condizionatore acceso a pieno regime.
 
 L'ospite attraverso l'app Ecotrip può visualizzare i dati del suo soggiorno
 corrente e di quelli passati, comprendenti sia i dati sintetizzati, che il
-consumo CO2 ed il punteggio "sostenibilità" aggiornati in tempo reale. Può anche
-visualizzare i dati istantanei ma solo fino al momento del check-out.
+consumo CO2 ed il punteggio "sostenibilità" aggiornati in tempo reale.
 
 Al fine di permettere all'ospite di collegarsi facilmente ed autonomamente ai
 dati del proprio soggiorno, a quest'ultimo viene associato un token univoco,
@@ -144,14 +143,13 @@ soggiorno ed il suo trasferimento alla centralina e successivamente allo
 smartphone mediante transponder NFC, permettendo così all'ospite di accedere ai
 dati del suo soggiorno.
 
-Guest App: include la visualizzazione dei dati della camera e del soggiorno
-tramite applicativo fruibile dagli ospiti, inoltre implementa gli aspetti di
-gamification.
+Guest App: include la visualizzazione dei dati del soggiorno tramite applicativo
+fruibile dagli ospiti, inoltre implementa gli aspetti di gamification.
 
 Di seguito il core domain chart dove mostriamo che secondo la nostra analisi i
-sottodomini centrali di ecotrip sono il monitoraggio della stanza, la gestione
-dei soggiorni con l'elaborazione dati e l'app per l'ospite. Consideriamo però
-l'app uno short-term core, in quanto il concetto di gamification potrebbe essere
-ripreso da altri in altri modi e quindi perdere di differenziazione nel mercato.
+sottodomini centrali di ecotrip sono il monitoraggio della stanza,
+l'elaborazione dati e l'app per l'ospite. Consideriamo però l'app uno short-term
+core, in quanto il concetto di gamification potrebbe essere ripreso da altri in
+altri modi e quindi perdere di differenziazione nel mercato.
 
 ![subdomains](./images/core-domain-chart.png)
