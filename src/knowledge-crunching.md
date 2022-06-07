@@ -39,18 +39,17 @@ prevediamo invece due possibilità:
   soffitto, in modo da stabilire se l'ospite è entrato o uscito ogni volta che
   la porta viene chiusa.
 
-La centralina è connessa alla rete wifi dell'hotel ed ha accesso ad Internet,
-all'avvio stabilisce una connessione con un servizio remoto al fine di rendersi
-configurabile a distanza. Una volta installata, la centralina deve essere
-abbinata con l'hotel ed un numero di camera. Dopo l'abbinamento questa
-campionerà ogni X secondi i dati da tutti i sensori e li invierà al servizio
-remoto.
+Una volta insallata, la centralina viene connessa alla rete wifi dell'hotel in
+modo da consentirle l'accesso ad Internet, inoltre viene configurata abbinandola
+al numero di camera. Dopo la configurazione, la centralina campionerà ogni X
+secondi i dati da tutti i sensori e li invierà sul cloud: deve essere possibile
+stabilire l'origine dei dati nei termini di hotel e camera. Infine il sistema
+deve prevedere meccanismi di controllo dello stato (centralina online/offline) e
+di manutenzione da remoto.
 
-Al fine di fornire le funzioni di abbinamento e monitoraggio dati, sarà
-predisposto un pannello di controllo: qui gli amministratori di Ecotrip potranno
-gestire la lista degli hotel, le loro camere e le centraline installate ancora
-da abbinare. Gli amministratori potranno infine, per ogni hotel, registrare
-l'account dell'albergatore.
+Gli amministratori di Ecotrip tramite un pannello di controllo possono gestire
+la lista degli hotel, le loro camere, visualizzare lo stato delle centraline
+installate ed infine registrare l'account dell'albergatore.
 
 L'albergatore potrà quindi accedere al pannello di controllo e, per ciascuna
 delle sue camere, visualizzare i dati istantanei raccolti dai sensori ed
@@ -132,7 +131,7 @@ apposito pannello di controllo, ovvero la configurazione di nuovi hotel, account
 utente/hotelier e centraline. Comprende anche la gestione dei soggiorni con
 check-in e check-out da parte dell'hotelier.
 
-Room Monitoring: comprende i sistemi e la sonsoristica necessari per la raccolta
+Room Monitoring: comprende i sistemi e la sensoristica necessari per la raccolta
 e lo stoccaggio in cloud dei dati delle stanze degli hotel.
 
 Data Elaboration: comprende il calcolo della stima dei consumi C02 e del
