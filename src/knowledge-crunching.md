@@ -39,7 +39,7 @@ prevediamo invece due possibilità:
   soffitto, in modo da stabilire se l'ospite è entrato o uscito ogni volta che
   la porta viene chiusa.
 
-Una volta insallata, la centralina viene connessa alla rete wifi dell'hotel in
+Una volta installata, la centralina viene connessa alla rete wifi dell'hotel in
 modo da consentirle l'accesso ad Internet, inoltre viene configurata abbinandola
 al numero di camera. Dopo la configurazione, la centralina campionerà ogni X
 secondi i dati da tutti i sensori e li invierà sul cloud: deve essere possibile
@@ -47,9 +47,9 @@ stabilire l'origine dei dati nei termini di hotel e camera. Infine il sistema
 deve prevedere meccanismi di controllo dello stato (centralina online/offline) e
 di manutenzione da remoto.
 
-Gli amministratori di Ecotrip tramite un pannello di controllo possono gestire
-la lista degli hotel, le loro camere, visualizzare lo stato delle centraline
-installate ed infine registrare l'account dell'albergatore.
+Gli amministratori di Ecotrip tramite un pannello di controllo web possono
+gestire la lista degli hotel, le loro camere, visualizzare lo stato delle
+centraline installate ed infine registrare l'account dell'albergatore.
 
 L'albergatore potrà quindi accedere al pannello di controllo e, per ciascuna
 delle sue camere, visualizzare i dati istantanei raccolti dai sensori ed
@@ -122,20 +122,32 @@ Di seguito riassumiamo i casi d'uso raggruppati in base al contesto
 
 ## Subdomains
 
-Abbiamo identificato 4 sottodomini del dominio.
+Abbiamo identificato N sottodomini.
 
 ![subdomains](./images/subdomains.png)
 
-Administration: comprende le funzionalità di amministrazione generale mediante
-apposito pannello di controllo, ovvero la configurazione di nuovi hotel, account
-utente/hotelier e centraline. Comprende anche la gestione dei soggiorni con
-check-in e check-out da parte dell'hotelier.
+Hotel Management: comprende le funzionalità svolte dall'amministratore Ecotrip
+che riguardano la configurazione di nuovi hotel con le camere.
 
-Room Monitoring: comprende i sistemi e la sensoristica necessari per la raccolta
-e lo stoccaggio in cloud dei dati delle stanze degli hotel.
+Stay Management: comprende la gestione dei soggiorni con le funzioni di check-in
+e check-out da parte dell'hotelier.
 
-Data Elaboration: comprende il calcolo della stima dei consumi C02 e del
-puntenggio "sostenibilità" relativo ai soggiorni.
+Authentication: comprende l'autenticazione utenti per l'accesso ai servizi di
+Hotel e Stay Management oltre che la possibilità di registrare gli account per
+gli hotelier.
+
+Control Unit Management: comprende la gestione delle centraline installate con
+la possibilità di verifica dello stato e di abbinamento alle camere.
+
+Control Unit Maintenance: comprende il sistema per la manutenzione da remoto
+delle centraline installate.
+
+Room Monitoring: comprende il software della centralina necessario per il
+campionamento dei dati dai sensori e lo stoccaggio in un servizio cloud.
+
+Data Elaboration: comprende il sistema per il calcolo della stima dei consumi
+C02 e del puntenggio "sostenibilità" relativo ai soggiorni, a partire dai dati
+collezionati.
 
 Guest Authorization: include il processo di generazione del token per un nuovo
 soggiorno ed il suo trasferimento alla centralina e successivamente allo
@@ -146,9 +158,19 @@ Guest App: include la visualizzazione dei dati del soggiorno tramite applicativo
 fruibile dagli ospiti, inoltre implementa gli aspetti di gamification.
 
 Di seguito il core domain chart dove mostriamo che secondo la nostra analisi i
-sottodomini centrali di ecotrip sono il monitoraggio della stanza,
-l'elaborazione dati e l'app per l'ospite. Consideriamo però l'app uno short-term
-core, in quanto il concetto di gamification potrebbe essere ripreso da altri in
-altri modi e quindi perdere di differenziazione nel mercato.
+sottodomini centrali di ecotrip sono Room Monitoring, Data Elaboration e Guest
+App. Consideriamo però l'app uno short-term core, in quanto il concetto di
+gamification potrebbe essere ripreso da altri in altri modi e quindi perdere di
+differenziazione nel mercato.
+
+I sottodimini Control Unit Management e Maintenance sono di tipo generico in
+quanto rappresentano servizi per IoT offerti in modo esaustivo dai grandi cloud
+provider: ad esempio tramite AWS IoT Core è possibile gestire le centraline
+abbinandole con dei tag alle camere degli hotel, verificarne lo stato ed
+effettuare manutenzione remota. Stessa cosa vale per il sottodominio
+Authentication che può essere delegato ad un servizio esterno come AWS Cognito.
+
+Infine, sottodomini Hotel Management, Stay Management e Guest Authorization sono
+considerati di supporto.
 
 ![subdomains](./images/core-domain-chart.png)
