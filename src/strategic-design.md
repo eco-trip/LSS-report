@@ -1,9 +1,14 @@
 # Strategic design
 
 Analizzando i sottodomini abbiamo identificato i componenti fisici e logici del
-sistema, andando così a definire i seguenti bounded-context.
+sistema, andando così a definire i bounded-context e le loro interazioni.
 
-## Administration
+## Bounded context
+
+- che cos'è un BC
+- perchè decidiamo qui il servizio esterno
+
+### Administration
 
 Per quanto concerne Hotel Management e Stay Management abbiamo deciso di
 definirli in un unico bounded context Administration: in questo modo i due
@@ -25,12 +30,12 @@ Infine, poichè è richiesto che il pannello di controllo sia fruibile via web
 andiamo ad applicare il backend-for-frontend pattern: Administration si occuperà
 di fornire una RESTful API ad uso del front-end che sarà descritto in seguito.
 
-## AWS Cognito:
+### AWS Cognito:
 
 Per il sottodominio generico Authentication definiamo il bounded context AWS
 Cognito che verrà affidato all'omonimo servizio Amazon.
 
-## Control Panel
+### Control Panel
 
 L'interfaccia utente di Administration e Authentication sarà separata in un
 bounded context a parte che rappresenta un progetto con framework React. Qui
@@ -41,7 +46,7 @@ dati di Room Monitoring, Data Elaboration e lo stato delle centraline servito da
 Control Unit Management, andando quindi a interagire con i relativi bounded
 context descritti in seguito.
 
-## AWS IoT Core
+### AWS IoT Core
 
 Con il bounded context AWS IoT Core, affidato all'omonimo servizio Amazon,
 includiamo i sottodomini Control Unit Management, Control Unit Maintenance e lo
@@ -49,39 +54,38 @@ storage cloud dei dati generati da Room Monitoring. AWS IoT Core di Amazon
 permette di gestire agevolmente tutto questo tramite un apposito pannello di
 controllo, dove è anche possibile abbinare le centraline alle stanze attraverso
 tagging. Infine, tramite un apposita Rest API è possibile ottenere per ogni
-centralina i dati caricati, verificarne lo stato ed infine inviare comandi:
+centralina i dati caricati, verificarne lo stato ed inviare comandi:
 quest'ultima possibilità può essere utilizzata per inviare il token di un
 ospite.
 
-## AWS IoT Device Client
-
-Con il bounded context AWS IoT Device Client viene inteso l'omonimo software da
-installare in ogni centralina e che le permette di connettersi ai servizi AWS
-IoT Core. Room Monitoring e Guest Authorization possono interagire con questo
-servizio attraverso apposita SDK.
-
-## Room Monitoring
-
-Per il sottodominio Room Monitoring definiamo un omonimo bounded context che
-rappresenta il software da installare nella centralina per campionare i dati dai
-sensori ed inviarli ad AWS IoT Core attraverso AWS IoT Device Client.
-
-## Guest Authorization
+### Guest Authorization Service
 
 Il sottodominio Guest Authorization è realizzabile con due sistemi distinti. Il
-primo bounded context, che chiameremo appunto Guest Authorization, si occupa
+primo bounded context, che chiameremo Guest Authorization Service, si occupa
 della generazione del token quando viene creato un nuovo soggiorno in Stay
 Management, e del suo trasferimento alla centralina attraverso AWS IoT Core.
 
-L'altro sistema è descritto qui di seguito.
+L'altro sistema necessario al processo di Guest Authorizzation è incluso come
+modulo nel software della centralina.
 
-## Control Unit Authorization
+### Control Unit
 
-Questo bounded context rappresenta il sistema installato nella centralina che,
-sottoscrivendosi agli eventi di AWS IoT Device Client, riceve gli aggiornamenti
-al token corrente. Il sistema inoltre gestisce il transponder NFC rilevando
-quando uno smartphone vi si avvicina e avviando il trasferimento del token.
+Predisponiamo un unico bounded context per il software della centralina, il
+quale è costituito da due moduli: uno che realizza le funzioni del sottodiminio
+Room Monitoring e l'altro quelle di Guest Authorization per quanto concerne la
+gestione del transponder NFC.
 
-## Guest App
+Si è evitato di creare due software indipendenti poiché i sottodimini coinvolti
+non presentano conflitti di _domain language_, devono avere lo stesso ciclo di
+vita e un unico deployment per semplificare la configurazione e manutenzione
+delle centraline.
+
+### Guest App
 
 Per il sottodominio Guest App definiamo un omonimo bounded context
+
+## Context map
+
+Di seguito vengono descritte le relazioni tra i bounded context.
+
+![context](./images/context-map.png)
