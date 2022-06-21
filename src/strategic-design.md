@@ -5,30 +5,40 @@ sistema, andando così a definire i bounded-context e le loro interazioni.
 
 ## Bounded context
 
-- che cos'è un BC
-- perchè decidiamo qui il servizio esterno
+Per bounded context si intende una suddivisione del dominio ben delineata ed
+avente un ubiquitous languange consistente nei suoi confini, un proprio modello
+e che rappresenti fisicamente un progetto a se stante con un proprio ciclo di
+vita, implementato e mantenuto da un unico team.
+
+In questa fase di progettazione si è anche deciso e specificato quali servizi
+esterni si occupano di gestire i sottodomini genereci del problema. Infatti la
+scelta dello specifico servizio vincola le interazioni tra bounded context e si
+riflette nella context map.
 
 ### Administration
 
 Per quanto concerne Hotel Management e Stay Management abbiamo deciso di
 definirli in un unico bounded context Administration: in questo modo i due
-singoli sottodomini rappresentano componenti logici del servizio.
+singoli sottodomini rappresentano componenti logici del singolo servizio.
 
-In questo caso abbiamo evitato la logica a microservizi pura, andando cioè a
-creare un boundex context per ciascun sottodominio, in quanto:
+Poichè è richiesto che il pannello di controllo sia fruibile via web si applica
+il backend-for-frontend pattern: Administration si occuperà di fornire una
+RESTful API ad uso del frontend che sarà descritto in seguito.
 
-- i singoli servizi hanno API molto ridotte
-- non ci sono conflitti a livello di domain language
-- Hotel Management avrà un numero di richieste molto basso e lo scaling del
-  servizio può essere dimensionato pensando unicamente a Stay Management
-- ci sarà un unico team a gestire il singolo bounded context
+Si noti che con Administration abbiamo evitato la logica a microservizi pura,
+andando cioè a creare un boundex context per ciascun sottodominio, in quanto:
 
-Questa strategia a nostro avviso ci consente di semplificare sviluppo e ridurre
-costi di deployment.
+- non ci sono conflitti a livello di domain language tra i due sottodomini
+- il ciclo di vita può essere unito in modo da avere un unico deployment su
+  unica infrastruttura riducendo i costi di fornitura del servizio
+- Hotel Management avrà un numero di richieste sempre molto basso e lo scaling
+  del servizio può essere dimensionato pensando unicamente a Stay Management
 
-Infine, poichè è richiesto che il pannello di controllo sia fruibile via web
-andiamo ad applicare il backend-for-frontend pattern: Administration si occuperà
-di fornire una RESTful API ad uso del front-end che sarà descritto in seguito.
+L'alternativa a questa strategia è di separare i due servizi e progettarli con
+paradigma totalmente serverless, che renda i costi del servizio proporzionali
+all'utilizzo. Questa modalità però dipende strettamente dai servizi offerti dal
+cloud provider e richiederebbe uno studio più approfondito dello stesso, cosa
+che non è possibile affrontare in questa sede.
 
 ### AWS Cognito:
 
@@ -86,6 +96,42 @@ Per il sottodominio Guest App definiamo un omonimo bounded context
 
 ## Context map
 
-Di seguito vengono descritte le relazioni tra i bounded context.
+Di seguito vengono mostrate le relazioni tra i bounded context.
 
 ![context](./images/context-map.png)
+
+Dalla context map si nota come il Control Panel ha una dipendenza con AWS
+Cognito gestita tramite ACL: il pannello infatti richiede l'autenticazione
+utente attraverso il servizio amazon e permette tramite apposita pagina di
+gestire gli account. Il pannello inoltre aggrega le informazioni da più servizi
+come AWS IoT Core per recuperare lo stato delle centraline installate e Data
+Elaboration Service per ottenere i calcoli relativi ai soggiorni. Infine
+fornisce l'interfaccia utente per le funzioni di Administration.
+
+Per quanto riguarda Administration, oltre a fornire un API per il pannello di
+controllo, ne fornisce un'altra in modalità OHS per la Guest App che necessita
+di reperire le informazioni su Stay ed Hotel. Entrambe queste API necessitano di
+verificare l'autenticità delle richieste, per questo Administration dipende da
+un lato da AWS Cognito e dall'altro da Guest Authorization Service che genera i
+token usati da Guest App per eseguire le richieste. Queste due dipendenze in
+realtà non rappresentano connessioni con i servizi remoti in quanto le verifiche
+possono essere eseguite localmente ad Administration, tuttavia il processo di
+verifica è vincolato alle tecnologie usate dai rispettivi servizi.
+
+Guest Authorization Service dipende da Administration in quanto è in ascolto
+degli eventi di checkin / checkout di Stay Management per generare il token e
+distriburlo alla relativa Control Unit tramite AWS IoT Core, trasferimento che
+avviene grazie alla connessione protetta da ACL della prima con il secondo.
+
+Control Unit, oltre che ricevere aggiornamenti di stato da AWS IoT Core, vi
+inoltra i dati raccolti dai sensori.
+
+Per quanto riguarda Guest App, oltre che connettersi ad Administration,
+necessita dei dati di Data Elaboration Service forniti tramite OHS. Infine,
+dipende dalla Control Unit per la modalità con la quale riceve un nuovo token
+attraverso NFC.
+
+Per concludere, Data Elaboration Service riceve aggiornamenti da AWS IoT Core
+per quanto riguarda i nuovi dati da elaborare, inoltre dipende da Guest
+Authorization Service in quanto si deve verificare in locale l'autenticità del
+token ricevuto con le richieste di Guest App (come fa anche Administration).
