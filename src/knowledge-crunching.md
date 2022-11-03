@@ -14,8 +14,7 @@ installando la centralina in una o più camere. Una centralina comprende diversi
 sensori cablati che andranno opportunamente sistemati all'interno della camera.
 I sensori previsti per il primo prototipo di Ecotrip sono:
 
-- 1 sensore per rilevare il consumo elettrico per l'intero circuito luci + 1 per
-  il circuito prese
+- 1 sensore per rilevare il consumo elettrico
 - 1 flussometro per misurare il consumo d'acqua fredda + 1 per l'acqua calda
 - 1 termometro per misurare la temperatura dell'acqua fredda + 1 per l'acqua
   calda
@@ -60,12 +59,18 @@ del pannello di controllo al gestionale dell'albergo.
 Per ogni soggiorno, cioè il periodo tra il check-in ed il check-out dell'ospite,
 saranno visualizzabili oltre che i dati sintetizzati, anche il consumo totale di
 CO2 ed il punteggio "sostenibilità" ottenuto. Il calcolo della CO2 viene fatto
-considerando il consumo energetico, comprensivo di quello stimato per il
-riscaldamento della camera e dell'acqua, e la provenienza dell'energia usata
-dall'hotel. Il punteggio "sostenibilità" tiene conto, non solo della CO2 totale,
-ma anche del comportamento tenuto dall'ospite durante la sua permanenza: ad
-esempio deve essere penalizzato il fatto di uscire dalla camera lasciando in
-periodo estivo di giorno tende aperte e condizionatore acceso a pieno regime.
+considerando il consumo elettrico utilizzato per alimentare la stanza, compreso
+quello per il suo riscaldamentoe e quello stimato per riscaldare l'acqua: si
+considera infatti che negli USA le camere vengono riscaldate unicamente con
+pompa di calore e non si utilizza gas/metano. Per effettuare il calcolo CO2 deve
+essere specificato per ciascun hotel il costo dell'energia nei termini di
+CO2/Kilowatt. Il punteggio "sostenibilità" tiene conto, non solo della CO2
+totale, ma anche del comportamento tenuto dall'ospite durante la sua permanenza.
+Alcuni comportamenti penalizzanti sono:
+
+- il fatto di uscire dalla camera lasciando in periodo estivo di giorno tende
+  aperte e condizionatore acceso a pieno regime.
+- usare eccessiva acqua
 
 L'ospite attraverso l'app Ecotrip può visualizzare i dati del suo soggiorno
 corrente e di quelli passati, comprendenti sia i dati sintetizzati, che il
