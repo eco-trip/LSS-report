@@ -127,9 +127,9 @@ Di seguito riassumiamo i casi d'uso raggruppati in base al contesto
 
 ## Subdomains
 
-Abbiamo identificato N sottodomini.
+Abbiamo identificato 9 sottodomini.
 
-![subdomains](./images/subdomains.png)
+![subdomains](./images/subdomains.jpg)
 
 Hotel Management: comprende le funzionalità svolte dall'amministratore Ecotrip
 che riguardano la configurazione di nuovi hotel con le camere.
