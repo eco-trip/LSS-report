@@ -137,9 +137,9 @@ che riguardano la configurazione di nuovi hotel con le camere.
 Stay Management: comprende la gestione dei soggiorni con le funzioni di check-in
 e check-out da parte dell'hotelier.
 
-Authentication: comprende l'autenticazione utenti per l'accesso ai servizi di
-Hotel e Stay Management oltre che la possibilità di registrare gli account per
-gli hotelier.
+Authentication: comprende sia l'autenticazione utenti quali amministratore
+Ecotrip e hotelier richiesta per l'utilizzo dei servizi come Hotel e Stay
+Management, che la possibilità di registrare gli account per gli hotelier.
 
 Control Unit Management: comprende la gestione delle centraline installate con
 la possibilità di verifica dello stato e di abbinamento alle camere.
@@ -147,8 +147,8 @@ la possibilità di verifica dello stato e di abbinamento alle camere.
 Control Unit Maintenance: comprende il sistema per la manutenzione da remoto
 delle centraline installate.
 
-Room Monitoring: comprende il software della centralina necessario per il
-campionamento dei dati dai sensori e lo stoccaggio in un servizio cloud.
+Room Monitoring: comprende il sistema per il campionamento dei dati dai sensori
+della centralina e lo stoccaggio in un servizio cloud.
 
 Data Elaboration: comprende il sistema per il calcolo della stima dei consumi
 C02 e del puntenggio "sostenibilità" relativo ai soggiorni, a partire dai dati
@@ -162,13 +162,19 @@ dati del suo soggiorno.
 Guest App: include la visualizzazione dei dati del soggiorno tramite applicativo
 fruibile dagli ospiti, inoltre implementa gli aspetti di gamification.
 
-Di seguito il core domain chart dove mostriamo che secondo la nostra analisi i
-sottodomini centrali di ecotrip sono Room Monitoring, Data Elaboration e Guest
-App. Consideriamo però l'app uno short-term core, in quanto il concetto di
-gamification potrebbe essere ripreso da altri in altri modi e quindi perdere di
-differenziazione nel mercato.
+Di seguito il core domain chart dove mostriamo che secondo la nostra analisi il
+sottodominio centrale di ecotrip è Room Monitoring: riteniamo che la raccolta
+dati pensata specificamente per le camere di hotel rappresenti un certo grado di
+innovazione oltre che presentare una certa complessità a livello di modello.
+Altri sottodomini fortemente diffarenzianti a livello di mercato sono Data
+Elaboration e Guest App: riteniamo infatti che i concetti innovativi del dominio
+siano rappresentati, oltre che dalla raccolta dati, anche e soprattutto dal modo
+con cui vengono calcolati i punteggi sostenibilità e dall'app, la quale si
+occupa di trasmettere l'idea con concetti di gamification. Tuttavia questi sono
+poco complessi a livello di model per questo li identifichiamo come sottodomini
+di supporto.
 
-I sottodimini Control Unit Management e Maintenance sono di tipo generico in
+I sottodomini Control Unit Management e Maintenance sono di tipo generico in
 quanto rappresentano servizi per IoT offerti in modo esaustivo dai grandi cloud
 provider: ad esempio tramite AWS IoT Core è possibile gestire le centraline
 abbinandole con dei tag alle camere degli hotel, verificarne lo stato ed
@@ -178,4 +184,4 @@ Authentication che può essere delegato ad un servizio esterno come AWS Cognito.
 Infine, sottodomini Hotel Management, Stay Management e Guest Authorization sono
 considerati di supporto.
 
-![subdomains](./images/core-domain-chart.png)
+![subdomains](./images/core-domain-chart.jpg)
