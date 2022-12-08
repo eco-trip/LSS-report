@@ -44,11 +44,35 @@ quelli più interni. Infatti, la comunicazione con gli altri _bounded context_
 avviene per mezzo di _adapter_ (interfacce) descritti internamente ed
 opportunamente concretizzati nell'ultimo livello.
 
-![Clean architecture: suddivisione dei moduli\label{cleanarc}](https://github.com/eco-trip/LSS-report/blob/feature/strategic-design/src/img/cl-architecture.png?raw=true)
+![Clean architecture: suddivisione dei moduli\label{cleanarc}](./images/cl-architecture.png)
 
 Si può quindi dire che la progettazione della _control unit_ è il risultato
 della combinazione della terminologia definita dal'_ubiquitous language_, con
 gli elementi del _domain model pattern_ ed i concetti dell'architettura
-esagonale (Figura \ref{cu-uml}).
+esagonale (Figura \ref{cu-uml}). Di particolare interesse è stato definire lo
+strato _core_ mediante casi d'uso, questi hanno permesso di orchestrare i flussi
+di dati da e verso le entità, rimanendo aderenti agli schemi elaborati durante
+la fase di _knowledge crunching_.
 
-![Modellazione UML del dominio\label{cu-uml}](https://github.com/eco-trip/LSS-report/blob/feature/strategic-design/src/img/control-unit-um.png?raw=true)
+![Modellazione UML del dominio\label{cu-uml}](./images/control-unit-um.png)
+
+Come già mostrato nella sezione dello _strategic design_, la _control unit_
+comunica con il _bounded context_ relativo all'AWS IoT Core[^1] tramite uno
+livello di ACL. Quest'ultimo è stato implementato estendendo uno specifico
+_adapter_ (`OutputAdapter`) e sfruttando le funzionalità offerte dall'omonimo
+`SDK` di Amazon AWS. Nello specifico, la libreria sfrutta il protocollo MQTT per
+l'invio delle rilevazioni e per avviare un processo di _shadowing_[^2] con cui
+monitorare la centralina.
+
+Infine, anche al lettore NFC è associato un determinato _adapter_, la cui
+concretizzatone permette di condividere con l'applicazione lato _guest_ (utente)
+il _token_ necessario per identificare univocamente il pernottamento in
+relazione alla stanza.
+
+[^1]:
+  Per dettagli:
+  [aws.amazon.com/it/iot-core](https://aws.amazon.com/it/iot-core/)
+
+[^2]:
+  Per dettagli:
+  [https://docs.aws.amazon.com/shadows](https://docs.aws.amazon.com/it_it/iot/latest/developerguide/iot-device-shadows.html)
