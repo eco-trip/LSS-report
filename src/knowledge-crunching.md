@@ -93,6 +93,62 @@ di violazioni di accesso ai dati.
 Al check-out è possibile calcolare uno sconto in base alla CO2 risparmiata
 rispetto a valori obiettivo e/o in base al punteggio "sostenibilità" ottenuto.
 
+## Ubiquitous Language
+Allo scopo di definire un linguaggio comune che eviti fraintendimenti e assunzioni, si è realizzato un glossario (Tabella \ref{my_table}) che esplicita l'intera terminologia di business.
+
+Table: (Glossario) \label{glossary}
+| **Termine** | **Definizione** | **Sinonimi** |
+|:---:|---|---|
+| Hotel | singola struttura che richiede l'installazione del servizio Ecotrip |  |
+| Room | singola stanza di un `hotel` di cui è necessario monitorare consumi e parametri ambientali  | Stanza |
+| Floor | piano relativo alla `stanza` | Piano della stanza |
+| Number | numero che identifica univocamente una `stanza` all'interno di un `hotel`  | Numero di stanza |
+| Stay | soggiornamento di un cliente in un `hotel` in relazione ad una specifica `stanza` | Soggiornamento |
+| Guest | cliente di un `hotel` che verrà registrato all'interno del sistema e che causerà la produzione di un nuovo `token` | Cliente |
+| Token | valore alfanumerico univico all'interno del sistema Ecotrip. Sarà generato automaticamente a partire dal `numero della stanza` e dall'identificativo dell'`hotel` |  |
+| CO2 | rappresenta il valore di anidride carbonica prodotto da una stanza, calcolata sulla base dei consumi | Anidride carbonica |
+| Score | valore numerico calcolato sulla base dei consumi di un certo `guest` in relazione a un certo `stay` | Punteggio |
+| Synthetic Data |  |  |
+| Formula | equazione utilizzata per il calcolo dello `score` |  |
+| Control Unit | centralina installata in una specifica `stanza` di `hotel`. Raccoglie i dati sui consumi e fattori ambientali sfruttando `sensori` | Centralina |
+| Boostrap | processo di inizializzazione necessario per avviare la `centralina` e connetterla al servizio esterno | Inizializzazione |
+| Status | stato della `centralina` utile per segnalare la presenza di eventuali malfunzionamenti | Stato della centralina |
+| Connection | fase successiva al `boostrap` che consente di recuperare il `token` corrente dal servizio esterno |  |
+| Sensor | sensore installato all'interno di una `stanza`, e connesso alla `centralina`, addetto al rilevamento di consumi (es. corrente, flusso d'acqua) o fattori ambientali (es. temperatura) | Sensore |
+| Collected Data | aggregato di dati prodotto dai rilevamenti relativi a una specifica `stanza`  |  |
+| Consumption | consumi rilevabili, prodotti da un `cliente` in una `stanza` (es. corrente e flusso d'acqua) | Consumi |
+| Ambient | fattori ambientali rilevabili all'interno di una `stanza` (es. temperatura) |  |
+| RoomTemperature | valore numerico che indica la temperatura di una specifica `stanza` in °C | Temperatura della stanza |
+| Humidity | valore numerico che indica l'umidità di una specifica `stanza` in % | Umidità |
+| Brightness | valore numerico che indica l'illuminazione di una specifica `stanza` in Lux | Luminosità |
+| Energy | descrive la categoria di consumi relativi alla corrente elettrica  |  |
+| Voltage | tensione elettrica misurata in V | Tensione |
+| Resistance | resistenza elettrica calcolta in Ohm | Resistenza |
+| Current | corrente elettrica calcolata in Amp | Corrente |
+| Waterflow | flusso d'acqua calcolato in litri al minuto | Flusso d'acqua |
+| Thermostat | sensore installato nei tubi d'acqua per misurarne la temperatura dell'acqua | Termistore, NTC |
+| WaterTemperature | valore numerico che indica la temperatura dell'acqua in °C |  |
+| Cold | identifica una temperatura dell'acqua sotto i 15 gradi |  |
+| Hot | identifica una temperatura dell'acqua sopra i 15 gradi |  |
+| Steinhart B formula | formula utilizzata dal `NTC` per il calcolo della temperatura al variare della resistenza |  |
+| ADC | convertitore di segnale analogico digitale | Convertitore |
+| Channel | canale analogico del convertitore |  |
+| Address | indirizzo virtuale del `sensore` analogico collegato all'`ADC` |  |
+| NTF Transponder | lettore NFC utilizzato per condividere il `token` con lo smartphone del `cliente` |  |
+| Control Panel | pannello di controllo utilizzato dal gestore dell'albergo per registrare lo `stay` e visualizzare i dati raccolti dalle diverse `stanze`  | Pannello di controllo |
+| Account | utente relativo ad un gestore d'albergo opportunamente registrato all'interno del sistema oppure all'amministratore |  |
+| Login | azione che permete ad un gestore o all'amministratore di accedere la sistema specificando _username_ e password |  |
+| Role | discrimina la categoria di utente memorizzato all'interno del sistema | Ruolo |
+| Admin | amministratore di sistema  | Amministratore |
+| Hotelier | gestore di un hotel che, tra le altre mansioni, si occupa di effettuare il `check-in` e `check-out` di un `guest` | Gestore d'albergo |
+| Check-in | descrive l'inizio dello `stay` di un `guest` |  |
+| Check-out | descrive il termine dello `stay` di un `guest`  |  |
+| App | applicazione frontend utilizata dal `guest` per visualizzare il proprio `score` |  |
+| Tap | definisce l'avvicinamento dello smartphone di un `guest` con la `control unit` al fine di ricevere il `token` |  |
+| Gamification | tecnica di miglioramento della UX per il `guest` |  |
+
+L'_ubiquitous language_ dovrebbe essere definito a livello di singolo _bounded context_ ma, data l'assenza di conflitti (stesso nome per concetti diversi), si è optato per un unica tabella globale.
+
 ## User stories
 
 Tra le user stories identificabili, quelle reltive al checkin/checkout e
