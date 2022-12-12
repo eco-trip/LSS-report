@@ -6,6 +6,15 @@ Nelle sezioni a seguire, per ogni sotto progetto, vengono mostrate le procedure
 di DevOps implementate per automatizzare e ottimizzare i processi interi che
 contribuiscono al miglioramento dell'attività di sviluppo dei diversi team.
 
+## Strategie di Version Control (globali)
+
+- conventional commits
+- gitflow (un unico branch main e un branch per ogni _feature_), release/X.Y.Z
+  (o hotfix/X.Y.Z)
+- commit firmati
+- pull request per ogni issue
+- pull-based merge come default
+
 ## Progetto `Control Unit`
 
 Come già descritto nelle sezioni precedenti, il progetto relativo alla
@@ -69,8 +78,36 @@ all'interno della `build` di Gradle, velocizzando quindi l'attività di
 _debugging_. Il secondo invece ha imposto dei vincoli sintattici sui messaggi di
 `commit` al fine di rispettare lo schema dei _Conventional commits_.
 
-[TODO] manca la parte su Renovate...
+[TODO] Renovate
 
-### Workflow CI
+### Workflow CI e CD
 
-### Continuous Delivery e Deployment
+Allo scopo di mantenere intatta la _build_ durante tutto il processo di
+sviluppo, si è realizzato un _workflow_ (`build-and-deploy.yml`) ad hoc tramite
+le Github Actions. Questo viene eseguito ogni volta che si effettua una _push_ o
+una _pull request_ verso il branch `main`. Il workflow si compone di due _job_:
+
+- `build`: come primo passo rende accessibile il repository al _workflow_
+  tramite `actions/checkout@v3`, successivamente sfrutta l'action
+  `DanySK/build-check-deploy-gradle-action` così da eseguire un'intera
+  _pipeline_ di CI ('build', 'check' e 'clean') sul progetto Gradle ed infine
+  effettua l'upload degli artefatti (`.jar`) generati avvalendosi di
+  `actions/upload-artifact@v3`
+- `release`: dipende dal _job_ precedente poiché necessita degli artefatti
+  caricati, infatti adopera `actions/download-artifact@v3` per memorizzare
+  questi all'interno del `$GITHUB_WORKSPACE` e successivamente pubblicarli
+  mediante l'_action_ custom `eco-trip/semantic-release-action`, precedentemente
+  descritta.
+
+Dato che i servizi sviluppati (`control-unit`) eseguiranno solo su determinati
+modelli di dispositivi, nello specifico _raspberry_, si è ritenuto non
+necessario eseguire il _job_ `build` su una matrice di sistemi operativi, ne
+utilizzare diverse versioni di Java.
+
+All'interno del file di _workflow_ vi è il riferimento a un particolare _token_
+(`secrets.GH_PACKAGES_TOKEN`) necessario per accedere a _packages_ privati
+memorizzati tramite l'omonima funzionalità di Github Packages. Questa soluzione
+ha permesso di pubblicare diversi artefatti prodotti a partire da un _fork_
+personale della libreria **Pi4J**, creato per aggiungere funzionalità di basso
+livello, che soddisfano specifiche esigenze, non ancora ufficialmente
+supportate.
