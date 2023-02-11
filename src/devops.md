@@ -1,21 +1,56 @@
 # DevOps
 
-[TODO] introduzione sulla devops...
+Nella realizzazione di un progetto software, la gestione del codice sorgente e il processo di continuous integration and continuous delivery (CI/CD) sono elementi fondamentali per garantire una efficace collaborazione tra i membri del team e un deployment affidabile e rapido delle funzionalità implementate. 
 
-Nelle sezioni a seguire, per ogni sotto progetto, vengono mostrate le procedure
-di DevOps implementate per automatizzare e ottimizzare i processi interi che
-contribuiscono al miglioramento dell'attività di sviluppo dei diversi team.
+In questo paragrafo verrà descritta l'organizzazione del progetto e le relative pratiche DevOps, dal lavoro di squadra alla distribuzione del software.
 
-## Strategie di Version Control (globali)
+Di seguito una panoramica sull'organizzazione dei vari repository
 
-- conventional commits
-- gitflow (un unico branch main e un branch per ogni _feature_), release/X.Y.Z
-  (o hotfix/X.Y.Z)
-- commit firmati
-- pull request per ogni issue
-- pull-based merge come default
+- [GitHub Actions](#github-actions) Sono state create diverse Composite GitHub Actions per evitare la ridondanza del codice e mantenere i workflow degli altri repository del progetto più leggeri e riutilizzabili.
 
-## Progetto `Control Unit`
+- [Control Unit](#control-unit): Repository per il software della centralina, che include tutto il codice necessario per la sua funzionalità.
+
+- [Ecotrip](#ecotrip): Repository che gestisce la parte del progetto basata su microservizi sul cloud. Include sottomoduli per ciascun servizio e verrà discussa successivamente.
+#### Strategie di Version Control (globali)
+
+Per garantire la qualità e la tracciabilità del codice sviluppato, abbiamo adottato una rigorosa strategia di controllo di versione. 
+
+- Conventional Commit per standardizzare la formattazione dei messaggi di commit e aiutare nella generazione automatica del changelog. 
+- Commit firmati, garantendo la responsabilità individuale per il codice inserito.
+- Pull basato sul rebase per garantire la pulizia delle storia del repository e una maggiore leggibilità.
+- GitFlow come modello di lavoro che prevende l'utilizzo in un'unica branch con la versione stabile del codice e le caratteristiche (_feature_) sviluppate su branch separate ed unite tramite Pull Request. Per il repo che riguarda la parte cloud del progetto (Ecotrip ed i relativi sottomoduli) abbiamo utilizzato anche la branch "dev" come punto di riferimento per la versione in corso del progetto in sviluppo. Inoltre, è anche possibile utilizzare una branch di "staging" se necessario per la preparazione della versione successiva.
+
+## GitHub Actions
+
+### [semantic-release-action](https://github.com/eco-trip/semantic-release-action)
+
+Questa azione segue il paradigma dei "conventional commits" per determinare la prossima versione del progetto, basandosi sulla regola SemVer (Semantic Versioning). In questo modo, la versione del progetto viene automaticamente incrementata in base alla gravità delle modifiche apportate.
+
+È in grado di generare automaticamente un changelog, riepilogando tutte le modifiche apportate dall'ultima versione del progetto. Questo changelog viene quindi utilizzato per creare una nuova release su GitHub, rendendo più semplice e trasparente la gestione delle versioni del progetto.
+
+### [npm-pull-request-action](https://github.com/eco-trip/npm-pull-request-action)
+
+Azione da eseguire durante la creazione di una pull request per repository basati su `npm` (tutti quelli relativi ai microservizi cloud). In particolare, questa azione esegue il lancio di alcuni strumenti di controllo qualità del codice, tra cui:
+
+- Prettier: un formattatore automatico di codice che aiuta a mantenere uno stile coerente ed esteticamente gradevole del codice sorgente.
+
+- ESLint: un linter che analizza il codice sorgente alla ricerca di potenziali problemi di sintassi, buone pratiche e altre regole personalizzabili.
+
+- Test: lanciare gli unit test per verificare che il codice sia corretto e funzionante. Inoltre, la coverage report viene generata per verificare la copertura di test del codice e identificare eventuali aree che potrebbero necessitare di ulteriori test
+
+L'utilizzo di questi strumenti durante la creazione di una pull request consente di individuare eventuali problemi nel codice prima che questo venga integrato nella branch principale, garantendo una maggiore qualità e stabilità del progetto.
+
+### [ci-deploy-action](https://github.com/eco-trip/ci-deploy-action)
+
+Azione utilizzata ogni volta che viene effettuata una release di staging o produzione di uno dei microservizi cloud di ecotrip. Questa azione lancia degli script che compilano i template di AWS SAM, con l'obiettivo di creare o aggiornare l'infrastruttura AWS (Amazon Web Services) tramite Cloud Formation. La "CI Deploy Action" garantisce un deploy rapido e affidabile, rendendo più efficiente il processo di release del progetto senza la necessità di interagire con l'interfaccia grafica di Amazon ed evitando momenti di "down" dei servizi.
+
+### [update-submodules-action](https://github.com/eco-trip/update-submodules-action): 
+
+Questa azione serve per automatizzare il processo di aggiornamento dei submodule all'interno del  repository principale `Ecotrip`. Questa azione viene lanciata ogni volta che una branch di un sottomodulo viene aggiornata con un push di un nuovo commit. In questo modo, il repository principale è sempre aggiornato al commit corretto del sottomodulo (nella relativa branch), mantenendo una relazione consistente tra i diversi componenti del progetto. Questo permette di semplificare il processo di mantenimento del progetto garantendo la coerenza.
+
+## Control Unit 
+
+[rasp-control-unit](https://github.com/eco-trip/rasp-control-unit) repository per il software della centralina, che include tutto il codice necessario per la sua funzionalità.
 
 Come già descritto nelle sezioni precedenti, il progetto relativo alla
 centralina si basa su una architettura esagonale, concretamente realizzata come
@@ -111,3 +146,17 @@ ha permesso di pubblicare diversi artefatti prodotti a partire da un _fork_
 personale della libreria **Pi4J**, creato per aggiungere funzionalità di basso
 livello, che soddisfano specifiche esigenze, non ancora ufficialmente
 supportate.
+
+## Ecotrip
+
+descrizione architettura con immagine
+
+descrizione del metodo di lavoro con docker 
+
+- Ecotrip
+	- Administraton
+	- App
+	- CP
+	- Cognito
+	- DataElaboration
+	- GuestAuthorization
