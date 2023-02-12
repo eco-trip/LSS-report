@@ -115,7 +115,7 @@ _debugging_. Il secondo invece ha imposto dei vincoli sintattici sui messaggi di
 
 [TODO] Renovate
 
-### Workflow CI e CD
+### Workflow CI/CD
 
 Allo scopo di mantenere intatta la _build_ durante tutto il processo di
 sviluppo, si è realizzato un _workflow_ (`build-and-deploy.yml`) ad hoc tramite
@@ -149,14 +149,85 @@ supportate.
 
 ## Ecotrip
 
-descrizione architettura con immagine
+Ecotrip è il repository che gestisce la parte del progetto basata su microservizi sul cloud. 
 
-descrizione del metodo di lavoro con docker 
+Per poter comprendere la sua organizzazione in sotto moduli e le relative DevOps è necessario prima descrivere l'acrhitettura implementata su Amazon Web Services (AWS).
 
-- Ecotrip
-	- Administraton
-	- App
-	- CP
-	- Cognito
-	- DataElaboration
-	- GuestAuthorization
+### Architettura AWS
+
+Il progetto Ecotrip si basa sul raccogliere dati da una moltitudine di camere di una moltitudine di hotel, 
+analizzarli ed aggregarli al fine di calcolare punteggi da fornire ad una moltitudine di utenti (visitatori e albergatori).
+
+In prima battuta però Ecotrip verrà adottato da un singolo Hotel, è chiara quindi l'esigenza di un'architettura di deployment che consenta di partire con costi ridotti e che permetta una scalabilità orizzontale al bisogno.
+
+Per ottenere questo abbiamo impiegato il paradigma Serverless per le componenti che richiedono una forte scalabilità, come il caricamento e lo stoccaggio dei dati, l'elaborazione e la fornitura verso gli utenti finali. Serverless significa impiegare servizi Cloud che scalano in automatico all'occorrenza, senza alcuna pianificazione prestabilita o intervento umano.
+
+![Architettura Cloud su AWS](images/AWS.jpg)
+
+Il servizio `IoT Core` gestisce le centraline IoT e il loro stato attraverso la `copia shadow`. La copia shadow rappresenta una versione virtuale dello stato di ogni centralina IoT, che viene mantenuta sincronizzata con la centralina stessa. Inoltre si preoccupa di ricevere i dati delle centraline attraverso messaggi MQTT e stoccarli attraverso una opportuna regola sulla tabella IoTData.
+
+La `REST API` della parte "Administration" è distribuita attraverso una istanza `EC2`.
+Il traffico richiesto per questo componente è relativamente basso in quanto la API "Administration" è soprattutto utilizzata dal pannello di controllo, e si assume che vengano fatte richieste contemporanee da al massimo un utente per hotel, oltre ai visitatori che attraverso le app ricevono limitate informazioni sull'hotel (il nome) e il pernottamento corrente.
+Per questo, in questa prima fase, si è scelto di non dotare il servizio API di scaling automatico tramite l'aggiunta di un load balancer.
+In futuro la EC2 potrebbe essere sostituire da un servizio API Gateway che consente la completa scalabilità on demand tramite l'impiego di Lambda per ogni endpoint.
+
+Le applicazioni single page (SPA) del pannello di controllo e web app sono distribuite tramite `CloudFront` di Amazon Web Services ed archiviate in un bucket S3. CloudFront è una rete di distribuzione dei contenuti (CDN) su server dislocati in tutto il mondo, il che garantisce una bassa latenza e una consegna veloce per gli utenti, indipendentemente dalla loro posizione geografica.
+
+La generazione del token per i visitatori del microservizio "Guest Authorization" avviene su una `Lambda`, questa si attiva alla ricezione di un messaggio inviato da "Administration" attraverso il servizio di coda `Simple Queue Service` impostato in modalità FIFO (FirstIn-FirstOut). La Lambda si occuperà di aggiornare il valore del token sulla copia shadow del dispositivo fisico, dopo averlo ricercato all'interno del servizio IoT Core attraverso attributi univoci che identificano la centralina di una determinata stanza di un albergo.
+
+Per l'elaborazione dei dati da parte di "Data Elaboration" è stata impiegata un'altra Lambda che si attiva periodicamente ogni 5 minuti attraverso un'attività pianificata di tipo `EventBridge`. Dopo aver eseguito i calcoli questi vengono memorizzati su un apposta tabella "DataElaboration" in DynamoDB.
+Attualmente i dati da elaborare vengono processati da un unica istanza della Lambda, ma è possibile strutturare il sistema in modo che ogni hotel avvii la sua istanza di Lambda periodicamente per processare unicamente i suoi dati: questo consente la totale scalabilità computazionale anche per quanto riguarda questo servizio che è il più critico ed oneroso in termini di costo di CPU.
+La fornitura dei dati elaborati, come i consumi di un pernottamento o il punteggio sostenibilità richiesti dai visitatori o albergatori, avviene attraverso una REST API realizzata con `API Gateway`: servizio di Amazon che permette ad una API di abbracciare in pieno il paradigma Serverless e quindi piena scalabilità on-demand.
+
+Per quanto riguarda la gestione degli utenti, abbiamo utilizzato `Cognito`. Abbiamo creato due diverse pool di utenti: una per il pannello di controllo "Administration" e un'altra per gli accessi liberi "IoT Free Access". La pool di utenti "Administration" fornisce l'accesso al pannello di controllo per gestire la configurazione e gestione degli alberghi, stanze e prenotazioni. La pool di utenti "IoT Free Access", d'altra parte, consente agli utenti sull'App di visualizzare i dati MQTT in tempo reale della parte IoT senza la necessità di una registrazione.
+Cognito emette un token di autorizzazione per ogni sessione di accesso degli utenti, che può essere utilizzato per autorizzare le richieste API. Il token di autorizzazione scade dopo un certo periodo di tempo, ma gli utenti possono ottenere un nuovo token di autorizzazione tramite il token di refresh. Questo sistema a due token garantisce la sicurezza dei dati degli utenti e delle applicazioni, poiché i token di autorizzazione possono essere revocati o scadere in qualsiasi momento, senza che ciò influisca sulla sessione di accesso degli utenti. 
+
+### Development
+
+In vista dell'architettura descritta in precedenza su AWS, abbiamo deciso di creare un repository separato per ogni servizio, al fine di garantirne l'autonomia e la gestione indipendente delle versioni. Tutti i repository sono poi stati incorporati come sottomoduli all'interno di un unico repository contenitore [Ecotrip](https://github.com/eco-trip/Ecotrip).
+
+- [Administraton](https://github.com/eco-trip/Administration)
+- [App](https://github.com/eco-trip/App)
+- [CP](https://github.com/eco-trip/CP)
+- [Cognito](https://github.com/eco-trip/Cognito)
+- [DataElaboration](https://github.com/eco-trip/DataElaboration)
+- [GuestAuthorization](https://github.com/eco-trip/GuestAuthorization)
+
+
+Per quanto riguarda lo sviluppo in locale, abbiamo creato un ambiente che riproduce l'architettura descritta in precedenza. 
+Utilizzando `Docker Compose`, abbiamo emulato le due Applicazioni (**App** e **ControlPanel**), la **Administration** REST API e il database DynamoDB in container separati. Mentre per quanto riguarda i servizi rimanenti (**Cognito**, **DataElaboration** e **GuestAutorizzazione**) abbiamo utilizzato script che compilano ed avviano template in `SAM` per creare stack in `CloudFormation`, effettuando così il deploy direttamente su AWS dei servizi per il singolo componente del team. 
+
+SAM (`Serverless Application Model`) è un framework opensource che attraverso modelli permette di descrivere l'architettura cloud da creare e gestire. SAM è stato progettato per semplificare la creazione e la gestione di applicazioni serverless utilizzando CloudFormation, senza dover accedere manualmente alle interfacce di gestione di AWS.
+
+Per iniziare a lavorare, sarà sufficiente scaricare il repository principale e avviare uno script di [setup](https://github.com/eco-trip/Ecotrip/blob/release/setup.sh). 
+
+```sh
+bash setup.sh
+```
+
+Questo script si occupa di preparare le giuste variabili ambiente sul proprio computer locale recuperando i segreti archiviati su AWS Secret manager eliminando la necessità di hardcodare elementi sensibili come password o chiavi API, garantendo una maggiore sicurezza del codice e una gestione più efficiente di questi elementi critici. Lo script gestirà anche l'installazione dei pacchetti npm e la predisposizione del servizio Cognito su per lo sviluppatore, garantendo che ogni membro del team possa lavorare sul progetto in modo autonomo.
+
+Per poter eseguire lo Script ed avere accesso ai segreti su AWS servirà avere la `cli` installata e configurata con il profilo Amazon corretto. Per utteriori dettagli e requistiti seguire il [README](https://github.com/eco-trip/Ecotrip).
+
+In seguito al completamento del processo di setup, sarà sufficiente eseguire il seguente comando
+
+```sh
+docker compose up
+```
+
+A questo punto lo sviluppatore si ritroverà buona parte del sistema emaulato ed all'occorrenza potrà avviare anche una propria istanza dei servizi "DataElaboration" e "GuestAuthorization" (di default non sono creati) attraverso [script di deploy](#script-di-deploy).
+
+Questo processo viene effettuato in modo specifico per ogni singolo membro del team, garantendo così un ambiente di sviluppo personalizzato e indipendente.
+
+#### Script di deploy
+
+...
+
+### Workflow CI/CD
+
+In fase di staging e production, il processo di deployment viene completamente automatizzato tramite le `GitHub Action` sulle apposite branch. Queste azioni avviano i relativi script che attraverso i template SAM creano e mantengono aggiornata l'infrastruttura su AWS, garantendo così un processo di distribuzione affidabile, efficiente e privo di errori. Il sistema di deploy automatico garantisce che il progetto sia sempre allineato alla versione più recente.
+
+L'ambiente di staging è una replica fedele dell'ambiente di produzione, che viene utilizzato per effettuare test e verifiche prima di effettuare eventuali modifiche al sistema in produzione. Questo ambiente separato permette di effettuare prove senza influire sul funzionamento e sui dati del sistema in produzione, garantendo così la stabilità e la sicurezza dell'intero ecosistema.
+
+
+	
