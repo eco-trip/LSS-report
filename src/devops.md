@@ -219,15 +219,13 @@ A questo punto lo sviluppatore si ritroverà buona parte del sistema emaulato ed
 
 Questo processo viene effettuato in modo specifico per ogni singolo membro del team, garantendo così un ambiente di sviluppo personalizzato e indipendente.
 
-#### Script di deploy
-
-...
-
 ### Workflow CI/CD
 
-In fase di staging e production, il processo di deployment viene completamente automatizzato tramite le `GitHub Action` sulle apposite branch. Queste azioni avviano i relativi script che attraverso i template SAM creano e mantengono aggiornata l'infrastruttura su AWS, garantendo così un processo di distribuzione affidabile, efficiente e privo di errori. Il sistema di deploy automatico garantisce che il progetto sia sempre allineato alla versione più recente.
+In fase di staging e production, il processo di deployment viene completamente automatizzato tramite le `GitHub Action` sulle apposite branch. Queste azioni avviano i relativi [script di deploy](#script-di-deploy) che attraverso i template SAM creano e mantengono aggiornata l'infrastruttura su AWS, garantendo così un processo di distribuzione affidabile, efficiente e privo di errori. Il sistema di deploy automatico garantisce che il progetto sia sempre allineato alla versione più recente.
 
 L'ambiente di staging è una replica fedele dell'ambiente di produzione, che viene utilizzato per effettuare test e verifiche prima di effettuare eventuali modifiche al sistema in produzione. Questo ambiente separato permette di effettuare prove senza influire sul funzionamento e sui dati del sistema in produzione, garantendo così la stabilità e la sicurezza dell'intero ecosistema.
 
+#### Script di deploy
 
+Abbiamo standardizzato l'utilizzo di una cartella `deploy` all'interno di ogni repository del progetto per facilitare il processo di deploy dell'infrastruttura su AWS. In questa cartella è presente uno script specifico per il **deploy** e uno per il **destroy** dell'infrastruttura. Lo script utilizza i segreti presenti su AWS, crea il template SAM e avvia lo stack Cloud Formation. La variabile "-e" permette di specificare se l'ambiente è "dev", "staging" o "production". Questi script possono essere eseguiti manualmente dalla console, se si hanno i permessi, o automaticamente dalle GitHub Actions.
 	
