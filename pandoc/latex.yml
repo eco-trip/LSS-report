@@ -1,6 +1,6 @@
-defaults:
-  - ./src/index.yml
-
+input-files:
+  - ./src/tactical-design.md
+  
 # common configuration
 from: markdown
 to: pdf
@@ -25,8 +25,8 @@ metadata:
   classoption:
     - oneside
   figPrefix:
-  - "Figura"
-  - "Figure"
+    - "Figura"
+    - "Figure"
 
 
 #
