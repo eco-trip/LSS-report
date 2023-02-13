@@ -25,9 +25,8 @@ I sensori previsti per il primo prototipo di Ecotrip sono:
 
 La centralina comprende anche un insieme di sensori per identificare se l'ospite
 è presente nella camera o meno: questo specifico aspetto viene lasciato per
-sviluppi successivi al primo prototipo, il quale "rileverà" la presenza
-dell'ospite attraverso un semplice interruttore meccanico. Nel prodotto finale
-prevediamo invece due possibilità:
+sviluppi successivi al primo prototipo. Nel prodotto finale prevediamo invece
+due possibilità:
 
 - nel caso in cui la camera dispone già di una centralina che accende e spegne
   l'impianto elettrico in base all'inserimento della chiave da parte
@@ -94,7 +93,9 @@ Al check-out è possibile calcolare uno sconto in base alla CO2 risparmiata
 rispetto a valori obiettivo e/o in base al punteggio "sostenibilità" ottenuto.
 
 ## Ubiquitous Language
-Allo scopo di definire un linguaggio comune che eviti fraintendimenti e assunzioni, si è realizzato un glossario (Tabella \ref{my_table}) che esplicita l'intera terminologia di business.
+Allo scopo di definire un linguaggio comune che eviti fraintendimenti e
+assunzioni, si è realizzato un glossario (Tabella \ref{my_table}) che esplicita
+l'intera terminologia di business.
 
 Table: (Glossario) \label{glossary}
 | **Termine** | **Definizione** | **Sinonimi** |
