@@ -100,38 +100,37 @@ Di seguito vengono mostrate le relazioni tra i bounded context.
 
 ![context](./images/context-map.png)
 
-Dalla context map si nota come il Control Panel ha una dipendenza con AWS
+Dalla context map si nota come il **Control Panel** ha una dipendenza con AWS
 Cognito gestita tramite ACL: il pannello infatti richiede l'autenticazione
 utente attraverso il servizio amazon e permette tramite apposita pagina di
 gestire gli account. Il pannello inoltre aggrega le informazioni da più servizi
-come AWS IoT Core per recuperare lo stato delle centraline installate e Data
-Elaboration Service per ottenere i calcoli relativi ai soggiorni. Infine
-fornisce l'interfaccia utente per le funzioni di Administration.
+come AWS IoT Core per recuperare lo stato delle centraline installate ed i dati dei consumi real-time,
+oltre che Data Elaboration Service per ottenere i calcoli relativi ai soggiorni. 
+Infine fornisce l'interfaccia utente per le funzioni di Administration.
 
-Per quanto riguarda Administration, oltre a fornire un API per il pannello di
+Per quanto riguarda **Administration**, oltre a fornire un API per il pannello di
 controllo, ne fornisce un'altra in modalità OHS per la Guest App che necessita
 di reperire le informazioni su Stay ed Hotel. Entrambe queste API necessitano di
 verificare l'autenticità delle richieste, per questo Administration dipende da
 un lato da AWS Cognito e dall'altro da Guest Authorization Service che genera i
-token usati da Guest App per eseguire le richieste. Queste due dipendenze in
-realtà non rappresentano connessioni con i servizi remoti in quanto le verifiche
+token usati da Guest App per eseguire le richieste. Viste in questo modo queste 
+due dipendenze non rappresentano connessioni con i servizi remoti in quanto le verifiche
 possono essere eseguite localmente ad Administration, tuttavia il processo di
-verifica è vincolato alle tecnologie usate dai rispettivi servizi.
+verifica è vincolato alle tecnologie usate dai rispettivi servizi. Administration comunque
+comunica direttamente con i due servizi di autenticazione/autorizzazione 
+nel momento in cui richiede l'inserimento di un nuovo account Albertore o 
+la generazione del token per il pernottamento al checkin di un visitatore.
 
-Guest Authorization Service dipende da Administration in quanto è in ascolto
-degli eventi di checkin / checkout di Stay Management per generare il token e
-distriburlo alla relativa Control Unit tramite AWS IoT Core, trasferimento che
-avviene grazie alla connessione protetta da ACL della prima con il secondo.
+**Guest Authorization Service** dipende da AWS IoT Core per sincronizzare con la relativa Control Unit 
+il token generato al checkin o rimosso al checkout.
 
-Control Unit, oltre che ricevere aggiornamenti di stato da AWS IoT Core, vi
+**Control Unit**, oltre che ricevere aggiornamenti di stato da AWS IoT Core, vi
 inoltra i dati raccolti dai sensori.
 
-Per quanto riguarda Guest App, oltre che connettersi ad Administration,
+Per quanto riguarda **Guest App**, oltre che connettersi ad Administration,
 necessita dei dati di Data Elaboration Service forniti tramite OHS. Infine,
 dipende dalla Control Unit per la modalità con la quale riceve un nuovo token
 attraverso NFC.
 
-Per concludere, Data Elaboration Service riceve aggiornamenti da AWS IoT Core
-per quanto riguarda i nuovi dati da elaborare, inoltre dipende da Guest
-Authorization Service in quanto si deve verificare in locale l'autenticità del
-token ricevuto con le richieste di Guest App (come fa anche Administration).
+Per concludere, **Data Elaboration Service** richiede aggiornamenti ad AWS IoT Core
+per quanto riguarda i nuovi dati da elaborare e fornisce un API in modalita OHS per Guest App e un altra per il Control Panel. Inoltre è tecnicamente vincolata a Guest Authorization Service in quanto si deve verificare localmente l'autenticità del token ricevuto con le richieste di Guest App.
