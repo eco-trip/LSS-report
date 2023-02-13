@@ -58,4 +58,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
+          token: ${{ secrets.SEMANTIC_RELEASE }}
+          checkout: false
           semantic_version: 16

@@ -10,7 +10,7 @@ _business logic_, l'architettura e il pattern di comunicazione.
 Come già anticipato le funzionalità della _control unit_ sono state raccolte in
 due _sub domain_ distinti: _Guest Authorization_ e _Room Monitoring_. Il primo
 definisce la gestione del _token_ di autorizzazione mentre la seconda descrive
-la logica di calcolo ed invio dei consumi. 
+la logica di calcolo ed invio dei consumi.
 
 Data la natura _core_ del _bounded context_ e un discreto numero di concetti di
 dominio da modellare, ci si è avvalsi del _domain model pattern_. Infatti la
@@ -81,11 +81,10 @@ inviarli verso l'esterno è racchiusa all'interno della classe
 periodicamente (ogni 5 secondi) ed in maniera concorrente tutti i rilevamenti
 necessari (consumi e ambiente), interrompendoli in caso di superamento del
 _timeout_. Una volta ottenuti tutti i risultati, i dati saranno serializzati e
-comunicati tramite l'`OutputAdapter`. 
+comunicati tramite l'`OutputAdapter`.
 
 ![Diagramma di stato del _room monitoring service_](./images/room-monitoring-service.jpeg){#fig:room-monitoring}
 
-
 [^1]: [aws.amazon.com/it/iot-core](https://aws.amazon.com/it/iot-core/)
-
-[^2]: [https://docs.aws.amazon.com/shadows](https://docs.aws.amazon.com/it_it/iot/latest/developerguide/iot-device-shadows.html)
+[^2]:
+  [https://docs.aws.amazon.com/shadows](https://docs.aws.amazon.com/it_it/iot/latest/developerguide/iot-device-shadows.html)
