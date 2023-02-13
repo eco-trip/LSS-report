@@ -3,6 +3,7 @@ defaults:
 
 # common configuration
 from: markdown
+to: pdf
 table-of-contents: true
 toc-depth: 3
 number-sections: true

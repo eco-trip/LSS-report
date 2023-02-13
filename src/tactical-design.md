@@ -2,13 +2,15 @@
 
 All'interno della seguente sezione vengono presentate tutte le scelte intraprese
 relative al _tactical design_. In particolare, queste sono state suddivise a
-livello di _bounded context_ (Figura ...) al fine di dettagliarne
-l'implementazione della _business logic_, l'architettura e il pattern di
-comunicazione.
+livello di _bounded context_ al fine di dettagliarne l'implementazione della
+_business logic_, l'architettura e il pattern di comunicazione.
 
 ## Control Unit
 
-Come già anticipato le funzionalità della _control unit_ sono state raccolte in due _sub domain_ distinti: _Guest Authorization_ e _Room Monitoring_. Il primo definisce la gestione del _token_ di autorizzazione mentre la seconda descrive la logica di calcolo ed invio dei consumi. 
+Come già anticipato le funzionalità della _control unit_ sono state raccolte in
+due _sub domain_ distinti: _Guest Authorization_ e _Room Monitoring_. Il primo
+definisce la gestione del _token_ di autorizzazione mentre la seconda descrive
+la logica di calcolo ed invio dei consumi. 
 
 Data la natura _core_ del _bounded context_ e un discreto numero di concetti di
 dominio da modellare, ci si è avvalsi del _domain model pattern_. Infatti la
@@ -26,7 +28,7 @@ _aggregators_, ma il loro impiego non è stato necessario dato il livello di
 complessità del dominio.
 
 Inoltre la struttura del _bounded context_ è sostenuta da una architettura
-esagonale (Figura \ref{cleanarc}), la quale garantisce caratteristiche quali:
+esagonale (Figura [@cleanarc]), la quale garantisce caratteristiche quali:
 
 - _modularità_: le regole operative possono essere collaudate indipendentemente
   dalla UI, dal database o qualsiasi altro elemento esterno;
@@ -42,19 +44,21 @@ solo all'interno, verso le politiche di alto livello. Nella pratica, alcune
 classi degli strati più esterni vanno ad implementare interfacce definite in
 quelli più interni. Infatti, la comunicazione con gli altri _bounded context_
 avviene per mezzo di _adapter_ (interfacce) descritti internamente ed
-opportunamente concretizzati nell'ultimo livello. Inoltre questa tipologia di architettura ha consentito di delineare un confine netto tra i due _sub domain_, separando questi in due moduli distinti.
+opportunamente concretizzati nell'ultimo livello. Inoltre questa tipologia di
+architettura ha consentito di delineare un confine netto tra i due _sub domain_,
+separando questi in due moduli distinti.
 
-![Clean architecture: suddivisione dei moduli\label{cleanarc}](./images/cl-architecture.png)
+![Clean architecture: suddivisione dei moduli](./images/cl-architecture.png){#fig:cleanarc}
 
 Si può quindi dire che la progettazione della _control unit_ è il risultato
 della combinazione della terminologia definita dall'_ubiquitous language_, con
 gli elementi del _domain model pattern_ ed i concetti dell'architettura
-esagonale (Figura \ref{cu-uml}). Di particolare interesse è stato definire lo
+esagonale (Figura [@fig:cu-uml]). Di particolare interesse è stato definire lo
 strato _core_ mediante casi d'uso, questi hanno permesso di orchestrare i flussi
 di dati da e verso le entità, rimanendo aderenti agli schemi elaborati durante
 la fase di _knowledge crunching_.
 
-![Modellazione UML del dominio\label{cu-uml}](./images/control-unit-uml.png)
+![Modellazione UML del dominio.](./images/control-unit-uml.png){#fig:cu-uml}
 
 Come già mostrato nella sezione dello _strategic design_, la _control unit_
 comunica con il _bounded context_ relativo all'AWS IoT Core[^1] tramite uno
@@ -64,16 +68,24 @@ _adapter_ (`OutputAdapter`) e sfruttando le funzionalità offerte dall'omonimo
 l'invio delle rilevazioni e per avviare un processo di _shadowing_[^2] con cui
 monitorare la centralina.
 
-Infine, anche al lettore NFC è associato un determinato _adapter_ che permette di condividere con l'applicazione lato _guest_ (utente) il _token_ necessario per identificare univocamente il pernottamento in
-relazione alla stanza.
+Infine, anche al lettore NFC è associato un determinato _adapter_ che permette
+di condividere con l'applicazione lato _guest_ (utente) il _token_ necessario
+per identificare univocamente il pernottamento in relazione alla stanza.
 
 ### Servizio di monitoraggio della stanza
 
-La logica che si occupata di raccogliere i dati dai sensori, aggregarli ed inviarli verso l'esterno è racchiusa all'interno della classe `RoomMonitoringService`. Questa sfrutta un _engine_, nella pratica uno `ScheduledExecutorService` di `java.util.concurrent`, per eseguire periodicamente (ogni 5 secondi) ed in maniera concorrente tutti i rilevamenti necessari (consumi e ambiente), interrompendoli in caso di superamento del _timeout_. Una volta ottenuti tutti i risultati, i dati saranno serializzati e comunicati tramite l'`OutputAdapter`. 
+La logica che si occupata di raccogliere i dati dai sensori, aggregarli ed
+inviarli verso l'esterno è racchiusa all'interno della classe
+`RoomMonitoringService`. Questa sfrutta un _engine_, nella pratica uno
+`ScheduledExecutorService` di `java.util.concurrent`, per eseguire
+periodicamente (ogni 5 secondi) ed in maniera concorrente tutti i rilevamenti
+necessari (consumi e ambiente), interrompendoli in caso di superamento del
+_timeout_. Una volta ottenuti tutti i risultati, i dati saranno serializzati e
+comunicati tramite l'`OutputAdapter`. 
 
-![Diagramma di stato del _room monitoring service_](./images/room-monitoring-service.jpeg)
+![Diagramma di stato del _room monitoring service_](./images/room-monitoring-service.jpeg){#fig:room-monitoring}
 
 
-[^1]: Per dettagli: [aws.amazon.com/it/iot-core](https://aws.amazon.com/it/iot-core/)
+[^1]: [aws.amazon.com/it/iot-core](https://aws.amazon.com/it/iot-core/)
 
-[^2]: Per dettagli: [https://docs.aws.amazon.com/shadows](https://docs.aws.amazon.com/it_it/iot/latest/developerguide/iot-device-shadows.html)
+[^2]: [https://docs.aws.amazon.com/shadows](https://docs.aws.amazon.com/it_it/iot/latest/developerguide/iot-device-shadows.html)
