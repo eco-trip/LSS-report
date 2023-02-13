@@ -176,7 +176,9 @@ Di seguito riassumiamo i casi d'uso raggruppati in base al contesto
 
 ![control panel use case](./images/control-panel-use-case.svg)
 
+<div style="background-color: rgb(255, 255, 255);">
 ![guest use case](./images/guest-authorization-use-case.svg)
+</div>
 
 ![room monitoring case](./images/room-monitoring-use-case.svg)
 
