@@ -1,4 +1,4 @@
-# knwoledge krunching
+# knowledge krunching
 
 Dalle prime interazioni con l'esperto di dominio lato cliente, si è notato che
 questo aveva ben chiari gli obiettivi finali del progetto, ma abbiamo dovuto
@@ -168,21 +168,19 @@ In ordine:
   soggiorno
 - l'ospite visualizza tramite app i dati del soggiorno
 
-![User story](./images/guest-authorization-story.svg)
+<img src="./images/guest-authorization-story.svg" style="background:white; clip-path: inset(25px 0 0 0);"/>
 
 ## Use cases
 
 Di seguito riassumiamo i casi d'uso raggruppati in base al contesto
 
-![control panel use case](./images/control-panel-use-case.svg)
+<img src="./images/control-panel-use-case.svg" style="background:white"/>
 
-<div style="background-color: rgb(255, 255, 255);">
-![guest use case](./images/guest-authorization-use-case.svg)
-</div>
+<img src="./images/guest-authorization-use-case.svg" style="background:white"/>
 
-![room monitoring case](./images/room-monitoring-use-case.svg)
+<img src="./images/room-monitoring-use-case.svg" style="background:white"/>
 
-![app use case](./images/app-use-case.svg)
+<img src="./images/app-use-case.svg" style="background:white"/>
 
 ## Subdomains
 
@@ -190,35 +188,35 @@ Abbiamo identificato 9 sottodomini.
 
 ![subdomains](./images/subdomains.jpg)
 
-Hotel Management: comprende le funzionalità svolte dall'amministratore Ecotrip
+**Hotel Management**: comprende le funzionalità svolte dall'amministratore Ecotrip
 che riguardano la configurazione di nuovi hotel con le camere.
 
-Stay Management: comprende la gestione dei soggiorni con le funzioni di check-in
+**Stay Management**: comprende la gestione dei soggiorni con le funzioni di check-in
 e check-out da parte dell'hotelier.
 
-Authentication: comprende sia l'autenticazione utenti quali amministratore
+**Authentication**: comprende sia l'autenticazione utenti quali amministratore
 Ecotrip e hotelier richiesta per l'utilizzo dei servizi come Hotel e Stay
 Management, che la possibilità di registrare gli account per gli hotelier.
 
-Control Unit Management: comprende la gestione delle centraline installate con
+**Control Unit Management**: comprende la gestione delle centraline installate con
 la possibilità di verifica dello stato e di abbinamento alle camere.
 
-Control Unit Maintenance: comprende il sistema per la manutenzione da remoto
+**Control Unit Maintenance**: comprende il sistema per la manutenzione da remoto
 delle centraline installate.
 
-Room Monitoring: comprende il sistema per il campionamento dei dati dai sensori
+**Room Monitoring**: comprende il sistema per il campionamento dei dati dai sensori
 della centralina e lo stoccaggio in un servizio cloud.
 
-Data Elaboration: comprende il sistema per il calcolo della stima dei consumi
+**Data Elaboration**: comprende il sistema per il calcolo della stima dei consumi
 C02 e del puntenggio "sostenibilità" relativo ai soggiorni, a partire dai dati
 collezionati.
 
-Guest Authorization: include il processo di generazione del token per un nuovo
+**Guest Authorization**: include il processo di generazione del token per un nuovo
 soggiorno ed il suo trasferimento alla centralina e successivamente allo
 smartphone mediante transponder NFC, permettendo così all'ospite di accedere ai
 dati del suo soggiorno.
 
-Guest App: include la visualizzazione dei dati del soggiorno tramite applicativo
+**Guest App**: include la visualizzazione dei dati del soggiorno tramite applicativo
 fruibile dagli ospiti, inoltre implementa gli aspetti di gamification.
 
 Di seguito il core domain chart dove mostriamo che secondo la nostra analisi il
