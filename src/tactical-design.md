@@ -28,7 +28,7 @@ _aggregators_, ma il loro impiego non è stato necessario dato il livello di
 complessità del dominio.
 
 Inoltre la struttura del _bounded context_ è sostenuta da una architettura
-esagonale (Figura [@cleanarc]), la quale garantisce caratteristiche quali:
+esagonale ([@fig:cleanarc]), la quale garantisce caratteristiche quali:
 
 - _modularità_: le regole operative possono essere collaudate indipendentemente
   dalla UI, dal database o qualsiasi altro elemento esterno;
@@ -53,10 +53,10 @@ separando questi in due moduli distinti.
 Si può quindi dire che la progettazione della _control unit_ è il risultato
 della combinazione della terminologia definita dall'_ubiquitous language_, con
 gli elementi del _domain model pattern_ ed i concetti dell'architettura
-esagonale (Figura [@fig:cu-uml]). Di particolare interesse è stato definire lo
-strato _core_ mediante casi d'uso, questi hanno permesso di orchestrare i flussi
-di dati da e verso le entità, rimanendo aderenti agli schemi elaborati durante
-la fase di _knowledge crunching_.
+esagonale ([@fig:cu-uml]). Di particolare interesse è stato definire lo strato
+_core_ mediante casi d'uso, questi hanno permesso di orchestrare i flussi di
+dati da e verso le entità, rimanendo aderenti agli schemi elaborati durante la
+fase di _knowledge crunching_.
 
 ![Modellazione UML del dominio.](./images/control-unit-uml.png){#fig:cu-uml}
 

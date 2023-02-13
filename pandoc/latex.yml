@@ -24,6 +24,10 @@ metadata:
   chapters: true
   classoption:
     - oneside
+  figPrefix:
+  - "Figura"
+  - "Figure"
+
 
 #
 output-file: LSSReport.pdf
