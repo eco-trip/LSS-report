@@ -1,8 +1,10 @@
 input-files:
   - ./src/context-goal.md
   - ./src/knowledge-crunching.md
+  - ./src/requirements.md
+  - ./src/strategic-design.md
   - ./src/tactical-design.md
-  - - ./src/devops.md
+  - ./src/devops.md
   
 # common configuration
 from: markdown
@@ -30,7 +32,9 @@ metadata:
   figPrefix:
     - "Figura"
     - "Figure"
-
+  tblPrefix:
+    - "Tabella"
+    - "Tabelle"
 
 #
 output-file: LSSReport.pdf

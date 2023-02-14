@@ -4,10 +4,8 @@ Dalle prime interazioni con l'esperto di dominio lato cliente, si è notato che
 questo aveva ben chiari gli obiettivi finali del progetto, ma abbiamo dovuto
 fornire consulenza tecnica, tecnologica e strategica per definire insieme le
 funzionalità da includere subito in Ecotrip e quelle invece lasciate a sviluppi
-futuri.
-
-Dopo alcune sessioni di knowledge crunching siamo giunti al seguente testo
-condiviso.
+futuri. Dopo alcune sessioni di knowledge crunching siamo giunti al seguente
+testo condiviso.
 
 Il gestore di un hotel, l'albergatore, può supportare il sistema Ecotrip
 installando la centralina in una o più camere. Una centralina comprende diversi
@@ -59,7 +57,7 @@ Per ogni soggiorno, cioè il periodo tra il check-in ed il check-out dell'ospite
 saranno visualizzabili oltre che i dati sintetizzati, anche il consumo totale di
 CO2 ed il punteggio "sostenibilità" ottenuto. Il calcolo della CO2 viene fatto
 considerando il consumo elettrico utilizzato per alimentare la stanza, compreso
-quello per il suo riscaldamentoe e quello stimato per riscaldare l'acqua: si
+quello per il suo riscaldamento e quello stimato per riscaldare l'acqua: si
 considera infatti che negli USA le camere vengono riscaldate unicamente con
 pompa di calore e non si utilizza gas/metano. Per effettuare il calcolo CO2 deve
 essere specificato per ciascun hotel il costo dell'energia nei termini di
@@ -94,19 +92,18 @@ rispetto a valori obiettivo e/o in base al punteggio "sostenibilità" ottenuto.
 
 ## Ubiquitous Language
 Allo scopo di definire un linguaggio comune che eviti fraintendimenti e
-assunzioni, si è realizzato un glossario (Tabella \ref{my_table}) che esplicita
+assunzioni, si è realizzato un glossario ([@tbl:glossary]) che esplicita
 l'intera terminologia di business.
 
-Table: (Glossario) \label{glossary}
 | **Termine** | **Definizione** | **Sinonimi** |
-|:---:|---|---|
+|---|----------|---|
 | Hotel | singola struttura che richiede l'installazione del servizio Ecotrip |  |
 | Room | singola stanza di un `hotel` di cui è necessario monitorare consumi e parametri ambientali  | Stanza |
 | Floor | piano relativo alla `stanza` | Piano della stanza |
 | Number | numero che identifica univocamente una `stanza` all'interno di un `hotel`  | Numero di stanza |
-| Stay | soggiornamento di un cliente in un `hotel` in relazione ad una specifica `stanza` | Soggiornamento |
+| Stay | soggiorno di un cliente in un `hotel` in relazione ad una specifica `stanza` | Soggiorno |
 | Guest | cliente di un `hotel` che verrà registrato all'interno del sistema e che causerà la produzione di un nuovo `token` | Cliente |
-| Token | valore alfanumerico univico all'interno del sistema Ecotrip. Sarà generato automaticamente a partire dal `numero della stanza` e dall'identificativo dell'`hotel` |  |
+| Token | valore alfanumerico univoco all'interno del sistema Ecotrip. Sarà generato automaticamente a partire dal `numero della stanza` e dall'identificativo dell'`hotel` |  |
 | CO2 | rappresenta il valore di anidride carbonica prodotto da una stanza, calcolata sulla base dei consumi | Anidride carbonica |
 | Score | valore numerico calcolato sulla base dei consumi di un certo `guest` in relazione a un certo `stay` | Punteggio |
 | Synthetic Data |  |  |
@@ -119,16 +116,16 @@ Table: (Glossario) \label{glossary}
 | Collected Data | aggregato di dati prodotto dai rilevamenti relativi a una specifica `stanza`  |  |
 | Consumption | consumi rilevabili, prodotti da un `cliente` in una `stanza` (es. corrente e flusso d'acqua) | Consumi |
 | Ambient | fattori ambientali rilevabili all'interno di una `stanza` (es. temperatura) |  |
-| RoomTemperature | valore numerico che indica la temperatura di una specifica `stanza` in °C | Temperatura della stanza |
+| Room Temperature | valore numerico che indica la temperatura di una specifica `stanza` in °C | Temperatura della stanza |
 | Humidity | valore numerico che indica l'umidità di una specifica `stanza` in % | Umidità |
 | Brightness | valore numerico che indica l'illuminazione di una specifica `stanza` in Lux | Luminosità |
 | Energy | descrive la categoria di consumi relativi alla corrente elettrica  |  |
 | Voltage | tensione elettrica misurata in V | Tensione |
-| Resistance | resistenza elettrica calcolta in Ohm | Resistenza |
+| Resistance | resistenza elettrica calcolata in Ohm | Resistenza |
 | Current | corrente elettrica calcolata in Amp | Corrente |
 | Waterflow | flusso d'acqua calcolato in litri al minuto | Flusso d'acqua |
 | Thermostat | sensore installato nei tubi d'acqua per misurarne la temperatura dell'acqua | Termistore, NTC |
-| WaterTemperature | valore numerico che indica la temperatura dell'acqua in °C |  |
+| Water Temperature | valore numerico che indica la temperatura dell'acqua in °C |  |
 | Cold | identifica una temperatura dell'acqua sotto i 15 gradi |  |
 | Hot | identifica una temperatura dell'acqua sopra i 15 gradi |  |
 | Steinhart B formula | formula utilizzata dal `NTC` per il calcolo della temperatura al variare della resistenza |  |
@@ -138,27 +135,28 @@ Table: (Glossario) \label{glossary}
 | NTF Transponder | lettore NFC utilizzato per condividere il `token` con lo smartphone del `cliente` |  |
 | Control Panel | pannello di controllo utilizzato dal gestore dell'albergo per registrare lo `stay` e visualizzare i dati raccolti dalle diverse `stanze`  | Pannello di controllo |
 | Account | utente relativo ad un gestore d'albergo opportunamente registrato all'interno del sistema oppure all'amministratore |  |
-| Login | azione che permete ad un gestore o all'amministratore di accedere la sistema specificando _username_ e password |  |
+| Login | azione che permette ad un gestore o all'amministratore di accedere la sistema specificando _username_ e password |  |
 | Role | discrimina la categoria di utente memorizzato all'interno del sistema | Ruolo |
 | Admin | amministratore di sistema  | Amministratore |
 | Hotelier | gestore di un hotel che, tra le altre mansioni, si occupa di effettuare il `check-in` e `check-out` di un `guest` | Gestore d'albergo |
 | Check-in | descrive l'inizio dello `stay` di un `guest` |  |
 | Check-out | descrive il termine dello `stay` di un `guest`  |  |
-| App | applicazione frontend utilizata dal `guest` per visualizzare il proprio `score` |  |
+| App | applicazione frontend utilizzata dal `guest` per visualizzare il proprio `score` |  |
 | Tap | definisce l'avvicinamento dello smartphone di un `guest` con la `control unit` al fine di ricevere il `token` |  |
 | Gamification | tecnica di miglioramento della UX per il `guest` |  |
+: Glossario del dominio analizzato. {#tbl:glossary}
 
 L'_ubiquitous language_ dovrebbe essere definito a livello di singolo _bounded context_ ma, data l'assenza di conflitti (stesso nome per concetti diversi), si è optato per un unica tabella globale.
 
 ## User stories
 
-Tra le user stories identificabili, quelle reltive al checkin/checkout e
+Tra le user stories identificabili, quelle relativo al check-in/check-out e
 autorizzazione dell'ospite mediante token risultano essere poco banali, le
 abbiamo quindi approfondite con l'esperto di dominio.
 
 In ordine:
 
-- l'albergatore esegue il checkin dell'ospite impostando un nuovo soggiorno per
+- l'albergatore esegue il check-in dell'ospite impostando un nuovo soggiorno per
   una camera
 - un nuovo token relativo al soggiorno viene generato
 - il token viene inviato alla centralina della camera
@@ -168,77 +166,69 @@ In ordine:
   soggiorno
 - l'ospite visualizza tramite app i dati del soggiorno
 
-![User story](./images/guest-authorization-story.jpg)
+![_User story_ relativa all'autorizzazione dell'ospite.](./images/guest-authorization-story.jpg)
 
 ## Use cases
 
-Di seguito riassumiamo i casi d'uso raggruppati in base al contesto
+Di seguito riassumiamo i casi d'uso raggruppati in base al contesto ([@fig:control-panel;@fig:guest-use-case;@fig:room-monitoring-use-case;@fig:app]).
 
-![control panel use case](./images/control-panel-use-case.jpg)
+![Casi d'uso del pannello di controllo lato _hotelier_.](./images/control-panel-use-case.jpg){#fig:control-panel}
 
-![guest use case](./images/guest-authorization-use-case.jpg)
+![Casi d'uso dell'autorizzazione dell'ospite.](./images/guest-authorization-use-case.jpg){#fig:guest-use-case}
 
-![room monitoring case](./images/room-monitoring-use-case.jpg)
+![Casi d'uso del monitoraggio della stanza.](./images/room-monitoring-use-case.jpg){#fig:room-monitoring-use-case}
 
-![app use case](./images/app-use-case.jpg)
+![Casi d'uso dell'applicazione lato ospite.](./images/app-use-case.jpg){#fig:app}
 
 ## Subdomains
 
 Abbiamo identificato 9 sottodomini.
 
-![subdomains](./images/subdomains.jpg)
+![Context Map del sistema Ecotrip.](./images/subdomains.jpg)
 
-**Hotel Management**: comprende le funzionalità svolte dall'amministratore Ecotrip
-che riguardano la configurazione di nuovi hotel con le camere.
+- **Hotel Management**: comprende le funzionalità svolte dall'amministratore Ecotrip che riguardano la configurazione di nuovi hotel con le camere.
 
-**Stay Management**: comprende la gestione dei soggiorni con le funzioni di check-in
-e check-out da parte dell'hotelier.
-
-**Authentication**: comprende sia l'autenticazione utenti quali amministratore
+- **Stay Management**: comprende la gestione dei soggiorni con le funzioni di
+check-in e check-out da parte dell'hotelier.
+- **Authentication**: comprende sia l'autenticazione utenti quali amministratore
 Ecotrip e hotelier richiesta per l'utilizzo dei servizi come Hotel e Stay
 Management, che la possibilità di registrare gli account per gli hotelier.
-
-**Control Unit Management**: comprende la gestione delle centraline installate con
+- **Control Unit Management**: comprende la gestione delle centraline installate con
 la possibilità di verifica dello stato e di abbinamento alle camere.
-
-**Control Unit Maintenance**: comprende il sistema per la manutenzione da remoto
+- **Control Unit Maintenance**: comprende il sistema per la manutenzione da remoto
 delle centraline installate.
-
-**Room Monitoring**: comprende il sistema per il campionamento dei dati dai sensori
+- **Room Monitoring**: comprende il sistema per il campionamento dei dati dai sensori
 della centralina e lo stoccaggio in un servizio cloud.
-
-**Data Elaboration**: comprende il sistema per il calcolo della stima dei consumi
-C02 e del puntenggio "sostenibilità" relativo ai soggiorni, a partire dai dati
+- **Data Elaboration**: comprende il sistema per il calcolo della stima dei consumi
+C02 e del punteggio "sostenibilità" relativo ai soggiorni, a partire dai dati
 collezionati.
-
-**Guest Authorization**: include il processo di generazione del token per un nuovo
+- **Guest Authorization**: include il processo di generazione del token per un nuovo
 soggiorno ed il suo trasferimento alla centralina e successivamente allo
 smartphone mediante transponder NFC, permettendo così all'ospite di accedere ai
 dati del suo soggiorno.
-
-**Guest App**: include la visualizzazione dei dati del soggiorno tramite applicativo
+- **Guest App**: include la visualizzazione dei dati del soggiorno tramite applicativo
 fruibile dagli ospiti, inoltre implementa gli aspetti di gamification.
 
 Di seguito il core domain chart dove mostriamo che secondo la nostra analisi il
-sottodominio centrale di ecotrip è Room Monitoring: riteniamo che la raccolta
+sottodominio centrale di Ecotrip è `Room Monitoring`: riteniamo che la raccolta
 dati pensata specificamente per le camere di hotel rappresenti un certo grado di
 innovazione oltre che presentare una certa complessità a livello di modello.
-Altri sottodomini fortemente diffarenzianti a livello di mercato sono Data
-Elaboration e Guest App: riteniamo infatti che i concetti innovativi del dominio
+Altri sottodomini fortemente differenzianti a livello di mercato sono `Data
+Elaboration` e `Guest App`: riteniamo infatti che i concetti innovativi del dominio
 siano rappresentati, oltre che dalla raccolta dati, anche e soprattutto dal modo
 con cui vengono calcolati i punteggi sostenibilità e dall'app, la quale si
 occupa di trasmettere l'idea con concetti di gamification. Tuttavia questi sono
 poco complessi a livello di model per questo li identifichiamo come sottodomini
 di supporto.
 
-I sottodomini Control Unit Management e Maintenance sono di tipo generico in
+I sottodomini `Control Unit Management` e `Maintenance` sono di tipo generico in
 quanto rappresentano servizi per IoT offerti in modo esaustivo dai grandi cloud
 provider: ad esempio tramite AWS IoT Core è possibile gestire le centraline
 abbinandole con dei tag alle camere degli hotel, verificarne lo stato ed
 effettuare manutenzione remota. Stessa cosa vale per il sottodominio
 Authentication che può essere delegato ad un servizio esterno come AWS Cognito.
 
-Infine, sottodomini Hotel Management, Stay Management e Guest Authorization sono
+Infine, sottodomini `Hotel Management`, `Stay Management` e `Guest Authorization` sono
 considerati di supporto.
 
-![subdomains](./images/core-domain-chart.jpg)
+![Core Domain Charts.](./images/core-domain-chart.jpg)

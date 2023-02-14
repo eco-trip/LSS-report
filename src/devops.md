@@ -28,7 +28,7 @@ Di seguito una panoramica sull'organizzazione dei vari _repository_:
   delle regole di stile, e di `:spotlessApply` per l’applicazione automatica
   delle stesse. I documenti in Markdown sono facilmente convertibili in altri
   formati, quindi i report vengono forniti in formato PDF, autogenerati ad ogni
-  nuova versione tramite l'utilizzo del _tool_ Pandoc. Il processo di
+  nuova versione tramite l'utilizzo del _tool_ **Pandoc**. Il processo di
   generazione dei report è stato automatizzato definendo un _workflow_ ad-hoc
   ([`upload-and-release.yml`](https://github.com/eco-trip/LSS-report/blob/feature/conclusion/.github/workflows/upload-and-release.yml))
   che internamente si avvale di un'immagine Docker di Pandoc e di una serie di
@@ -182,7 +182,7 @@ all'interno della `build` di Gradle, velocizzando quindi l'attività di
 _debugging_. Il secondo invece ha imposto dei vincoli sintattici sui messaggi di
 `commit` al fine di rispettare lo schema dei _Conventional commits_.
 
-Infine, all'interno del repository ci si è avvalsi di Dependabot, strumento di
+Infine, all'interno del repository ci si è avvalsi di **Dependabot**, strumento di
 automazione disponibile su Github. Questo permette di effettuare un controllo
 settimanale sulle dipendenze (librerie o pacchetti) del codice. In questo modo,
 ad ogni nuova versione rilevata, il _bot_ creerà una _pull request_ dedicata al
