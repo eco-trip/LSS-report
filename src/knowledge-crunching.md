@@ -168,27 +168,19 @@ In ordine:
   soggiorno
 - l'ospite visualizza tramite app i dati del soggiorno
 
-<div style="background: rgb(255, 255, 255);clip-path: inset(30px 0 0 0)">
-
-![User story](./images/guest-authorization-story.svg)
-
-</div>
+![User story](./images/guest-authorization-story.jpg)
 
 ## Use cases
 
 Di seguito riassumiamo i casi d'uso raggruppati in base al contesto
 
-<div style="background: rgb(255, 255, 255);">
+![control panel use case](./images/control-panel-use-case.jpg)
 
-![control panel use case](./images/control-panel-use-case.svg)
+![guest use case](./images/guest-authorization-use-case.jpg)
 
-![guest use case](./images/guest-authorization-use-case.svg)
+![room monitoring case](./images/room-monitoring-use-case.jpg)
 
-![room monitoring case](./images/room-monitoring-use-case.svg)
-
-![app use case](./images/app-use-case.svg)
-
-</div>
+![app use case](./images/app-use-case.jpg)
 
 ## Subdomains
 
