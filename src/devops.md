@@ -125,7 +125,8 @@ centralina si basa su una architettura esagonale, concretamente realizzata come
 una _build_ multi-progetto avvalendosi del tool di _build automation_
 **Gradle**. Questa soluzione ha permesso di suddividere la complessità del
 progetto in moduli interconnessi evitando una struttura monolitica. In linea con
-i concetti della _clean architecture_ i moduli sviluppati sono i seguenti:
+i concetti della _clean architecture_ i moduli sviluppati ([@fig:full-view])
+sono i seguenti:
 
 - `utils`: modulo di livello 0 che contiene strutture dati e algoritmi comuni;
 - `domain`: modulo che implementa oggetti(entità) di dominio;
@@ -136,7 +137,7 @@ i concetti della _clean architecture_ i moduli sviluppati sono i seguenti:
 - `authorization`: modulo contenente la logica relativa alla gestione del
   _token_ di autorizzazione condiviso con l'utente (_guest_).
 
-![Vista completa dei moduli e delle loro dipendenze](images/gradle-multi-build.png)
+![Vista completa dei moduli e delle loro dipendenze](images/gradle-multi-build.png){#fig:full-view}
 
 I moduli `authorization` e `room-monitoring` possono essere dispiegati
 separatamente come servizi distinti.
@@ -232,25 +233,24 @@ implementata su Amazon Web Services (AWS).
 
 Il progetto Ecotrip si basa sul raccogliere dati da una moltitudine di camere di
 una moltitudine di hotel, analizzarli ed aggregarli al fine di calcolare
-punteggi da fornire ad una moltitudine di utenti (visitatori e albergatori).
+punteggi da fornire ad una moltitudine di utenti (visitatori e albergatori). In
+prima battuta però Ecotrip verrà adottato da un singolo Hotel, è chiara quindi
+l'esigenza di un'architettura di deployment che consenta di partire con costi
+ridotti e che permetta una scalabilità orizzontale al bisogno. Per ottenere
+questo abbiamo impiegato il paradigma _Serverless_ per le componenti che
+richiedono una forte scalabilità, come il caricamento e lo stoccaggio dei dati,
+l'elaborazione e la fornitura verso gli utenti finali. _Serverless_ significa
+impiegare servizi Cloud che scalano in automatico all'occorrenza, senza alcuna
+pianificazione prestabilita o intervento umano.
 
-In prima battuta però Ecotrip verrà adottato da un singolo Hotel, è chiara
-quindi l'esigenza di un'architettura di deployment che consenta di partire con
-costi ridotti e che permetta una scalabilità orizzontale al bisogno.
+![Architettura Cloud su AWS](images/AWS.jpg){#fig:aws}
 
-Per ottenere questo abbiamo impiegato il paradigma Serverless per le componenti
-che richiedono una forte scalabilità, come il caricamento e lo stoccaggio dei
-dati, l'elaborazione e la fornitura verso gli utenti finali. Serverless
-significa impiegare servizi Cloud che scalano in automatico all'occorrenza,
-senza alcuna pianificazione prestabilita o intervento umano.
-
-![Architettura Cloud su AWS](images/AWS.jpg)
-
-Il servizio `IoT Core` gestisce le centraline IoT e il loro stato attraverso la
-`copia shadow`. La copia shadow rappresenta una versione virtuale dello stato di
-ogni centralina IoT, che viene mantenuta sincronizzata con la centralina stessa.
-Inoltre si preoccupa di ricevere i dati delle centraline attraverso messaggi
-MQTT e stoccarli attraverso una opportuna regola sulla tabella IoTData.
+Il servizio `IoT Core` ([@fig:aws]) gestisce le centraline IoT e il loro stato
+attraverso la `copia shadow`. La copia shadow rappresenta una versione virtuale
+dello stato di ogni centralina IoT, che viene mantenuta sincronizzata con la
+centralina stessa. Inoltre si preoccupa di ricevere i dati delle centraline
+attraverso messaggi MQTT e stoccarli attraverso una opportuna regola sulla
+tabella IoTData.
 
 La `REST API` della parte "Administration" è distribuita attraverso una istanza
 `EC2`. Il traffico richiesto per questo componente è relativamente basso in
@@ -378,7 +378,7 @@ seguente comando:
 docker compose up
 ```
 
-A questo punto lo sviluppatore si ritroverà buona parte del sistema emaulato ed
+A questo punto lo sviluppatore si ritroverà buona parte del sistema emulato ed
 all'occorrenza potrà avviare anche una propria istanza dei servizi
 "DataElaboration" e "GuestAuthorization" (di default non sono creati) attraverso
 [script di deploy](#script-di-deploy).
