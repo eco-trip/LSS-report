@@ -1,5 +1,5 @@
 defaults:
-  - ./src/index.yml
+  - ./src/devops.md
 
 # common configuration
 from: markdown
