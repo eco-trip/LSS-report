@@ -19,3 +19,7 @@ illustreremo passo passo il problema e la nostra soluzione.
 - [Strategic design](src/strategic-design.md)
 - [Tactical Design](src/tactical-design.md)
 - [DevOps](src/devops.md)
+- [Conclusioni](src/conclusion.md)
+
+Per la versione PDF del report consultare la pagina delle
+[release](https://github.com/eco-trip/LSS-report/releases).
