@@ -1,4 +1,6 @@
 input-files:
+  - ./src/context-goal.md
+  - ./src/knowledge-crunching.md
   - ./src/tactical-design.md
   
 # common configuration

@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='29 -1 1257 890' xmlns:xlink='http://www.w3.org/1999/xlink' width='1257.0px' font-size='13' font-family='Arial, LiberationSans' version='1.1' height='890.0px'>
+  <defs>
+<style type='text/css'><![CDATA[svg text {text-rendering: geometricPrecision;}]]></style>    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='86277596-acdc-4b24-9868-8d1183953a87' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(239, 233, 222)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='b733f2f3-9170-4b05-8f2c-3951faddf752' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='c2231e17-aa6e-469b-b309-75fc3c714be5' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='3eeba858-e09d-403f-b8de-66a03df727fb' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='f4267fe4-f3c9-432d-a86b-603c013d2f7a' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='c9839a3b-bb33-4778-b284-ead310262e95' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='12d2cf26-1b9d-48d4-adcb-206dd39aa915' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='509c7d97-6dd0-45d5-9a32-41a26fd508e3' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='4c31d331-da0a-426a-a7b4-b88277e47d7b' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='e90e875f-faf1-4896-9b38-822212135fb4' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='befcb228-6d86-46fb-a28c-9d06b900b747' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='11148cf8-9f73-4635-b891-9363674046c7' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='7c2ffb6e-2fa8-4072-b272-ea3d976d9f1d' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='2a798eac-f035-44b2-94cc-28a465d2aafc' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='b216df77-0460-4884-916c-7b2e1867f927' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='bd9edd26-547d-4fd3-82e8-5810bb11f2fb' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+  </defs>
+  <desc>UsecaseDiagram</desc>
+  <g transform='translate(59.0,315.0)' id='_nGfMwLA9EDqB7-Hd-h84Sw'>
+    <circle r='6.5' cx='20.0' cy='8.5' stroke-width='1.5' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <line y1='15.0' x1='20.0' y2='45.5' x2='20.0' stroke-width='1.5' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <line y1='26.0' x1='6.0' y2='26.0' x2='34.0' stroke-width='1.5' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <line y1='45.5' x1='20.0' y2='63.0' x2='9.2' stroke-width='1.5' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <line y1='45.5' x1='20.0' y2='63.0' x2='30.799999999999997' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <text text-anchor='middle' x='20.0' y='78.0' font-size='13' font-style='normal' fill='rgb(0, 0, 0)'>Guest</text>
+  </g>
+  <g transform='translate(1216.0,751.0)' id='_y8wlQLA_EDqB7-Hd-h84Sw'>
+    <circle r='6.5' cx='20.0' cy='8.5' stroke-width='1.5' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <line y1='15.0' x1='20.0' y2='45.5' x2='20.0' stroke-width='1.5' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <line y1='26.0' x1='6.0' y2='26.0' x2='34.0' stroke-width='1.5' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <line y1='45.5' x1='20.0' y2='63.0' x2='9.2' stroke-width='1.5' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <line y1='45.5' x1='20.0' y2='63.0' x2='30.799999999999997' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <text text-anchor='middle' x='20.0' y='78.0' font-size='13' font-style='normal' fill='rgb(0, 0, 0)'>Hotelier</text>
+  </g>
+  <g transform='translate(1216.0,70.0)' id='_y6gQkLBBEDqB7-Hd-h84Sw'>
+    <circle r='5.5' cx='20.0' cy='7.5' stroke-width='1.5' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <line y1='13.0' x1='20.0' y2='38.5' x2='20.0' stroke-width='1.5' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <line y1='22.0' x1='8.0' y2='22.0' x2='32.0' stroke-width='1.5' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <line y1='38.5' x1='20.0' y2='53.0' x2='10.8' stroke-width='1.5' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <line y1='38.5' x1='20.0' y2='53.0' x2='29.2' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <text text-anchor='middle' x='20.0' y='68.0' font-size='13' font-style='normal' fill='rgb(0, 0, 0)'>Control Unit</text>
+  </g>
+  <g transform='translate(128.0,29.0)' id='_SObiULBJEDqB7-Hd-h84Sw'>
+    <rect x='0.0' width='133.0px' y='0.0' stroke-width='1.0' fill='url(#86277596-acdc-4b24-9868-8d1183953a87)' stroke='rgb(194, 183, 159)' look='allInOne' height='24.0px'/>
+    <rect x='0.0' width='990.0px' y='24.0' stroke-width='1.0' fill='url(#86277596-acdc-4b24-9868-8d1183953a87)' stroke='rgb(194, 183, 159)' look='allInOne' height='806.0px'/>
+    <text font-weight='bold' text-anchor='middle' x='66.5' y='18.0' font-size='13' fill='rgb(128, 98, 33)'>Guest authorization</text>
+  </g>
+  <g transform='translate(363.0,307.0)' id='_v4spQLA9EDqB7-Hd-h84Sw'>
+    <ellipse cx='85.0' cy='50.0' rx='85.0' ry='50.0' stroke-width='1.0' fill='url(#b733f2f3-9170-4b05-8f2c-3951faddf752)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,43.5)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='85.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>NFC tap with smartphone</text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(160.0,152.0)' id='_SetbALA-EDqB7-Hd-h84Sw'>
+    <ellipse cx='95.0' cy='50.5' rx='95.0' ry='50.5' stroke-width='1.0' fill='url(#c2231e17-aa6e-469b-b309-75fc3c714be5)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,44.0)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='95.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>App download</text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(363.0,500.0)' id='_ElnHwbA_EDqB7-Hd-h84Sw'>
+    <ellipse cx='85.0' cy='40.0' rx='85.0' ry='40.0' stroke-width='1.0' fill='url(#3eeba858-e09d-403f-b8de-66a03df727fb)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,33.5)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='85.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>App launch</text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(925.0,523.0)' id='_2viTULA_EDqB7-Hd-h84Sw'>
+    <ellipse cx='65.0' cy='35.0' rx='65.0' ry='35.0' stroke-width='1.0' fill='url(#f4267fe4-f3c9-432d-a86b-603c013d2f7a)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,20.5)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='65.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>Check-in</text>
+      </g>
+      <text text-anchor='middle' x='65.0' y='29.0' font-size='12' fill='rgb(105, 105, 105)'>(from Control panel)</text>
+    </g>
+  </g>
+  <g transform='translate(668.0,751.0)' id='_EIZx4LBAEDqB7-Hd-h84Sw'>
+    <ellipse cx='63.0' cy='44.0' rx='63.0' ry='44.0' stroke-width='1.0' fill='url(#c9839a3b-bb33-4778-b284-ead310262e95)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,29.5)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='63.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>Check-out</text>
+      </g>
+      <text text-anchor='middle' x='63.0' y='29.0' font-size='12' fill='rgb(105, 105, 105)'>(from Control panel)</text>
+    </g>
+  </g>
+  <g transform='translate(653.0,520.0)' id='_c3EEALBAEDqB7-Hd-h84Sw'>
+    <ellipse cx='78.0' cy='38.0' rx='78.0' ry='38.0' stroke-width='1.0' fill='url(#12d2cf26-1b9d-48d4-adcb-206dd39aa915)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,23.5)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='78.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>Login</text>
+      </g>
+      <text text-anchor='middle' x='78.0' y='29.0' font-size='12' fill='rgb(105, 105, 105)'>(from Control panel)</text>
+    </g>
+  </g>
+  <g transform='translate(905.0,374.0)' id='_ZJCdobBBEDqB7-Hd-h84Sw'>
+    <ellipse cx='85.0' cy='40.0' rx='85.0' ry='40.0' stroke-width='1.0' fill='url(#509c7d97-6dd0-45d5-9a32-41a26fd508e3)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,33.5)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='85.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>Token generation</text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(719.0,172.0)' id='_HsOMALBCEDqB7-Hd-h84Sw'>
+    <ellipse cx='90.0' cy='30.0' rx='90.0' ry='30.0' stroke-width='1.0' fill='url(#4c31d331-da0a-426a-a7b4-b88277e47d7b)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,23.5)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='90.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>Token update</text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(348.0,74.0)' id='_vBqE0bBDEDqB7-Hd-h84Sw'>
+    <ellipse cx='100.5' cy='35.0' rx='100.5' ry='35.0' stroke-width='1.0' fill='url(#e90e875f-faf1-4896-9b38-822212135fb4)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,28.5)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='100.5' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>Token transmission</text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(332.0,755.0)' id='_J5RVkLBGEDqB7-Hd-h84Sw'>
+    <ellipse cx='95.0' cy='40.0' rx='95.0' ry='40.0' stroke-width='1.0' fill='url(#befcb228-6d86-46fb-a28c-9d06b900b747)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,33.5)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='95.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>Token deactivation</text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(160.0,515.0)' id='_5hhhMLGcEDqaEtWqhKmuxA'>
+    <polygon stroke-width='0.5' fill='rgb(255, 255, 255)' stroke='rgb(107, 107, 107)' look='allInOne' points='0.0,0.0 0.0,50.0 130.0,50.0 130.0,15.0 115.0,0.0'/>
+    <polygon stroke-width='1.0' fill='rgb(107, 107, 107)' look='border' stroke='rgb(107, 107, 107)' points='115.0,1.0 115.0,15.0 129.0,15.0'/>
+    <clipPath id='clip_5hhhMLGcEDqaEtWqhKmuxA'>
+      <rect x='5.0' width='105.0px' y='5.0' height='40.0px'/>
+    </clipPath>
+    <g transform='translate(0.0,0.0)'>
+      <text clip-path='url(#clip_5hhhMLGcEDqaEtWqhKmuxA)' x='5.0' y='18.0' font-size='13' fill='rgb(45, 45, 45)'>Support guest&apos;s</text>
+      <text clip-path='url(#clip_5hhhMLGcEDqaEtWqhKmuxA)' x='5.0' y='31.0' font-size='13' fill='rgb(45, 45, 45)'>unique token</text>
+    </g>
+  </g>
+  <g transform='translate(737.0,392.0)' id='_6kmAYLGfEDqaEtWqhKmuxA'>
+    <polygon stroke-width='0.5' fill='rgb(255, 255, 255)' stroke='rgb(107, 107, 107)' look='allInOne' points='0.0,0.0 0.0,43.0 118.0,43.0 118.0,15.0 103.0,0.0'/>
+    <polygon stroke-width='1.0' fill='rgb(107, 107, 107)' look='border' stroke='rgb(107, 107, 107)' points='103.0,1.0 103.0,15.0 117.0,15.0'/>
+    <clipPath id='clip_6kmAYLGfEDqaEtWqhKmuxA'>
+      <rect x='5.0' width='93.0px' y='5.0' height='33.0px'/>
+    </clipPath>
+    <g transform='translate(0.0,0.0)'>
+      <text clip-path='url(#clip_6kmAYLGfEDqaEtWqhKmuxA)' x='5.0' y='18.0' font-size='13' fill='rgb(45, 45, 45)'>associated to a</text>
+      <text clip-path='url(#clip_6kmAYLGfEDqaEtWqhKmuxA)' x='5.0' y='31.0' font-size='13' fill='rgb(45, 45, 45)'>room number</text>
+    </g>
+  </g>
+  <text text-anchor='middle' x='287.0' y='286.0' fill='rgb(0, 0, 0)'>« extend »</text>
+  <g transform='translate(144.0,371.0)' id='_CJ-LwLA_EDqB7-Hd-h84Sw'/>
+  <text text-anchor='middle' x='487.0' y='450.0' fill='rgb(0, 0, 0)'>« include »</text>
+  <g transform='translate(1058.0,698.0)' id='_CXGMULBAEDqB7-Hd-h84Sw'/>
+  <g transform='translate(942.0,808.0)' id='_GT71ULBAEDqB7-Hd-h84Sw'/>
+  <text text-anchor='middle' x='869.0' y='584.0' fill='rgb(0, 0, 0)'>« include »</text>
+  <text text-anchor='middle' x='775.0' y='683.0' fill='rgb(0, 0, 0)'>« include »</text>
+  <g transform='translate(820.0,122.0)' id='_w8yUwLBDEDqB7-Hd-h84Sw'/>
+  <text text-anchor='middle' x='488.0' y='239.0' fill='rgb(0, 0, 0)'>« include »</text>
+  <text text-anchor='middle' x='1029.0' y='498.0' fill='rgb(0, 0, 0)'>« include »</text>
+  <text text-anchor='middle' x='596.0' y='816.0' fill='rgb(0, 0, 0)'>« include »</text>
+  <text text-anchor='middle' x='680.0' y='478.0' fill='rgb(0, 0, 0)'>« include »</text>
+  <text text-anchor='middle' x='967.0' y='322.0' fill='rgb(0, 0, 0)'>« include »</text>
+  <g transform='translate(983.0,160.0)' id='_MtK5MLBJEDqB7-Hd-h84Sw'/>
+  <g id='_VaYh8LA-EDqB7-Hd-h84Sw'>
+    <line y1='253.0' x1='317.0' y2='307.0' x2='385.0' stroke-dasharray='7, 3' id='_VahE0LA-EDqB7-Hd-h84Sw' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+    <polyline transform='translate(385.0,307.0) rotate(128.45370921670596)' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)' points='-5.0,10.0 0.0,0.0 5.0,10.0'/>
+  </g>
+  <g id='_CJviQLA_EDqB7-Hd-h84Sw'>
+    <line y1='355.0' x1='99.0' y2='356.0' x2='363.0' id='_CJzMorA_EDqB7-Hd-h84Sw' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+  </g>
+  <g id='_Kj3O4LA_EDqB7-Hd-h84Sw'>
+    <line y1='407.0' x1='448.0' y2='500.0' x2='448.0' stroke-dasharray='7, 3' id='_Kj65QbA_EDqB7-Hd-h84Sw' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+    <polyline transform='translate(448.0,500.0) rotate(-180.0)' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)' points='-5.0,10.0 0.0,0.0 5.0,10.0'/>
+  </g>
+  <g id='_CW6mILBAEDqB7-Hd-h84Sw'>
+    <line y1='772.0' x1='1216.0' y2='593.0' x2='1026.0' id='_CW9pcbBAEDqB7-Hd-h84Sw' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+  </g>
+  <g id='_GT1HoLBAEDqB7-Hd-h84Sw'>
+    <line y1='794.0' x1='794.0' y2='791.0' x2='1216.0' id='_GT280bBAEDqB7-Hd-h84Sw' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+  </g>
+  <g id='_gNQjwLBAEDqB7-Hd-h84Sw'>
+    <line y1='558.0' x1='925.0' y2='558.0' x2='809.0' stroke-dasharray='7, 3' id='_gNTAArBAEDqB7-Hd-h84Sw' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+    <polyline transform='translate(809.0,558.0) rotate(-90.0)' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)' points='-5.0,10.0 0.0,0.0 5.0,10.0'/>
+  </g>
+  <g id='_F0MI0LBBEDqB7-Hd-h84Sw'>
+    <line y1='751.0' x1='731.0' y2='596.0' x2='731.0' stroke-dasharray='7, 3' id='_F0PMIrBBEDqB7-Hd-h84Sw' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+    <polyline transform='translate(731.0,596.0) rotate(-0.0)' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)' points='-5.0,10.0 0.0,0.0 5.0,10.0'/>
+  </g>
+  <g id='_w8mukLBDEDqB7-Hd-h84Sw'>
+    <line y1='105.0' x1='1216.0' y2='108.0' x2='549.0' id='_w8pK0rBDEDqB7-Hd-h84Sw' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+  </g>
+  <g id='_yyOzcLBDEDqB7-Hd-h84Sw'>
+    <line y1='307.0' x1='448.0' y2='144.0' x2='448.0' stroke-dasharray='7, 3' id='_yyQBkrBDEDqB7-Hd-h84Sw' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+    <polyline transform='translate(448.0,144.0) rotate(-0.0)' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)' points='-5.0,10.0 0.0,0.0 5.0,10.0'/>
+  </g>
+  <g id='_BiMV4LBGEDqB7-Hd-h84Sw'>
+    <line y1='523.0' x1='990.0' y2='454.0' x2='990.0' stroke-dasharray='7, 3' id='_BiOyIbBGEDqB7-Hd-h84Sw' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+    <polyline transform='translate(990.0,454.0) rotate(-0.0)' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)' points='-5.0,10.0 0.0,0.0 5.0,10.0'/>
+  </g>
+  <g id='_NKhq8LBGEDqB7-Hd-h84Sw'>
+    <line y1='795.0' x1='668.0' y2='795.0' x2='522.0' stroke-dasharray='7, 3' id='_NKl8YLBGEDqB7-Hd-h84Sw' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+    <polyline transform='translate(522.0,795.0) rotate(-90.0)' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)' points='-5.0,10.0 0.0,0.0 5.0,10.0'/>
+  </g>
+  <g id='_GTLRQLBJEDqB7-Hd-h84Sw'>
+    <line y1='755.0' x1='452.0' y2='232.0' x2='789.0' stroke-dasharray='7, 3' id='_GTOUkLBJEDqB7-Hd-h84Sw' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+    <polyline transform='translate(789.0,232.0) rotate(32.79609091117787)' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)' points='-5.0,10.0 0.0,0.0 5.0,10.0'/>
+  </g>
+  <g id='_HKU7sLBJEDqB7-Hd-h84Sw'>
+    <line y1='374.0' x1='955.0' y2='232.0' x2='834.0' stroke-dasharray='7, 3' id='_HKWJ0rBJEDqB7-Hd-h84Sw' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+    <polyline transform='translate(834.0,232.0) rotate(-40.434737615583025)' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)' points='-5.0,10.0 0.0,0.0 5.0,10.0'/>
+  </g>
+  <g id='_MtDkcLBJEDqB7-Hd-h84Sw'>
+    <line y1='109.0' x1='1216.0' y2='181.0' x2='899.0' id='_MtGAsLBJEDqB7-Hd-h84Sw' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+  </g>
+  <line y1='414.0' x1='855.0' y2='414.0' x2='905.0' stroke-dasharray='1, 2' id='_F22XwrGgEDqaEtWqhKmuxA' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+  <line y1='540.0' x1='363.0' y2='540.0' x2='290.0' stroke-dasharray='1, 2' id='_zvia0LGkEDqaEtWqhKmuxA' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+</svg>
