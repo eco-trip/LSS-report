@@ -1,6 +1,7 @@
 input-files:
   - ./src/tactical-design.md
-  
+  - ./src/conclusion.md
+
 # common configuration
 from: markdown
 to: pdf
