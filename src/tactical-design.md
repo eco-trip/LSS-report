@@ -101,3 +101,53 @@ di stato ([@fig:room-monitoring]).
 [^1]: [aws.amazon.com/it/iot-core](https://aws.amazon.com/it/iot-core/)
 [^2]:
   [https://docs.aws.amazon.com/shadows](https://docs.aws.amazon.com/it_it/iot/latest/developerguide/iot-device-shadows.html)
+
+
+## Administration
+
+Per Administration si adotta un architettura semplice di tipo \textit{transaction script} sufficiente a gestire la complessità della sua logica di business.
+In particolare questo si traduce in una Rest API dove ogni rotta avvia una singola procedura che si occupa della transazione.
+Ciascuna transazione per essere eseguita richiede un token di autenticazione, generato dal servizio AWS Cognito. 
+Inoltre vengono adottati meccanismi RBAC per autorizzare l'esecuzione delle transazioni in base alla tipologia di utente, amministratore o albergatore.
+
+Riportiamo in figura un semplice diagramma ER che modella i dati.
+
+<div style="background:white;padding:10px;margin-bottom:10px;text-align:center;">
+
+<img src="./images/er-admin.png" alt="Diagramma ER di _Administration_" width="680"/>
+
+</div>
+
+## AWS IoT Core
+
+Questo componente è delegato all'omonimo servizio Amazon, 
+qui riportiamo solamente in figura la definizione della tabella per storicizzare i dati inviati delle centraline.
+
+<div style="background:white;padding:10px;text-align:center;margin-bottom:10px">
+
+<img src="./images/er-iot.png" alt="Modello dati di _AWS IoT Core_" width="170"/>
+
+</div>
+
+## Data Elaboration
+
+Il componente Data Elaboration comprende due servizi uno per calcolare e storicizzare i dati ed uno per fornirli con Rest API.
+Per la prima funzionalità, non occorre una particolare architettura in quanto i calcoli possono avvenire in un'unica procedura avviata periodicamente.
+Per la seconda parte è sufficiente un'unica rotta che richiede un token di accesso Cognito o fornito da Guest Authorization.
+
+Maggiori dettagli per comprendere la progettazione di questo componente sono specificati nel capitolo relativo al devop / deployment.
+
+Riportiamo in figura la definizione della tabella per storicizzare i dati elaborati.
+
+<div style="background:white;padding:10px;text-align:center;margin-bottom:10px">
+
+<img src="./images/er-elaboration.png" alt="Modello dati di _Data Elaboration_" width="170"/>
+
+</div>
+
+
+## Guest Authorization
+
+Il componente Guest Authorization non richiede una particolare architettura in quanto è realizzabile con un unica procedura avviata su richiesta.
+Per permettere ad Administration di avviare la funzione di questo componente ad ogni check-in/out è possibile adottare una Rest API con un'unica rotta oppure un meccanismo a messaggi: Administration invia un messaggio a Guest Authorization che reagisce lanciando la procedura.
+Optiamo per la seconda possibilità come meglio specificato nel capitolo relativo al devop / deployment.
