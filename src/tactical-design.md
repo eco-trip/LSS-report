@@ -56,7 +56,17 @@ gli elementi del _domain model pattern_ ed i concetti dell'architettura
 esagonale ([@fig:cu-uml]). Di particolare interesse è stato definire lo strato
 _core_ mediante casi d'uso, questi hanno permesso di orchestrare i flussi di
 dati da e verso le entità, rimanendo aderenti agli schemi elaborati durante la
-fase di _knowledge crunching_.
+fase di _knowledge crunching_. I casi d'uso possono essere riassunti in:
+
+- `EnvironmentUseCases`: racchiude la logica relativa al rilevamento dei fattori
+  ambientali tramite i sensori di temperatura dell’acqua, luminosità,
+  temperatura e umidità della stanza;
+- `ConsumptionUseCases`: come si evince dal nome, si occupa della raccolta dei
+  consumi idrici ed elettrici;
+- `AuthorizationUseCases`: set di funzionalità fondamentali per l’avvio della
+  centralia, la ricezione/comunicazione del token d’accesso e l’implementazione
+  del protocollo di comunicazione tra la _control unit_ e uno smartphone nelle
+  vicinanze.
 
 ![Modellazione UML del dominio.](./images/control-unit-uml.png){#fig:cu-uml}
 
@@ -64,7 +74,7 @@ Come già mostrato nella sezione dello _strategic design_, la _control unit_
 comunica con il _bounded context_ relativo all'AWS IoT Core[^1] tramite uno
 livello di ACL. Quest'ultimo è stato implementato estendendo uno specifico
 _adapter_ (`OutputAdapter`) e sfruttando le funzionalità offerte dall'omonimo
-`SDK` di Amazon AWS. Nello specifico, la libreria sfrutta il protocollo MQTT per
+`SDK` di Amazon AWS. Nello specifico, la libreria si avvale del protocollo MQTT per
 l'invio delle rilevazioni e per avviare un processo di _shadowing_[^2] con cui
 monitorare la centralina.
 
@@ -80,8 +90,11 @@ inviarli verso l'esterno è racchiusa all'interno della classe
 `ScheduledExecutorService` di `java.util.concurrent`, per eseguire
 periodicamente (ogni 5 secondi) ed in maniera concorrente tutti i rilevamenti
 necessari (consumi e ambiente), interrompendoli in caso di superamento del
-_timeout_. Una volta ottenuti tutti i risultati, i dati saranno serializzati e
-comunicati tramite l'`OutputAdapter`.
+_timeout_. Una volta ottenuti tutti i risultati, questi vengono prima
+serializzati grazie un’istanza di `Serializer` e successivamente comunicati verso
+l’esterno tramite l’`OutputAdapter`. Data la natura concorrente del servizio, si
+è scelto di schematizzarne il comportamento attraverso un diagramma di stato
+([@fig:room-monitoring]).
 
 ![Diagramma di stato del _room monitoring service_](./images/room-monitoring-service.jpeg){#fig:room-monitoring}
 
