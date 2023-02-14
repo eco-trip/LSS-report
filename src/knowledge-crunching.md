@@ -1,4 +1,4 @@
-# knowledge krunching
+# Knowledge crunching
 
 Dalle prime interazioni con l'esperto di dominio lato cliente, si è notato che
 questo aveva ben chiari gli obiettivi finali del progetto, ma abbiamo dovuto
