@@ -1,8 +1,12 @@
-defaults:
-  - ./src/devops.md
-
+input-files:
+  - ./src/context-goal.md
+  - ./src/knowledge-crunching.md
+  - ./src/tactical-design.md
+  - - ./src/devops.md
+  
 # common configuration
 from: markdown
+to: pdf
 table-of-contents: true
 toc-depth: 3
 number-sections: true
@@ -23,6 +27,10 @@ metadata:
   chapters: true
   classoption:
     - oneside
+  figPrefix:
+    - "Figura"
+    - "Figure"
+
 
 #
 output-file: LSSReport.pdf

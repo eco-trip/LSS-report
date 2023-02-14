@@ -1,0 +1,332 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='38 80 1362 994' xmlns:xlink='http://www.w3.org/1999/xlink' width='1362.0px' font-size='13' font-family='Arial, LiberationSans' version='1.1' height='994.0px'>
+  <defs>
+<style type='text/css'><![CDATA[svg text {text-rendering: geometricPrecision;}]]></style>    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='2e290177-bbda-46e8-b578-0b5dc502c401' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(239, 233, 222)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='477c3fa2-c917-4f13-97fe-70a30ca4cc44' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='669844e4-f827-4fdc-bfc6-ef4009676113' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='e843036e-994a-42ca-8e4a-6790466688f4' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='413fb6c5-be7c-46d2-be40-7249c6b999f5' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='4c917286-459f-47e4-af42-38522af2e603' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='5777a9ff-8760-45fd-940f-228d4c5661de' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='df13bf3b-96cd-474a-96c7-5ab3bd67cba1' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='d6ad1f27-20f9-4b2c-b81f-4009062f54d0' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='b860bd40-26a1-4f2f-b313-2b93a55b62fe' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='0e6e6cf9-d9b9-4deb-a011-0b3ef518b56e' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='6a6617f7-5ef2-4cbc-a4f5-4bac0bb11240' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='e805c485-c8f7-436b-bb94-f17dc5b6fade' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='d35474b7-43b3-497f-9870-dac7c640ee33' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='f8932e0b-e67f-4011-bc9f-5791044a9bbf' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='ef7518f2-f319-4a40-9a3a-7e21e2351787' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='f5f73084-566d-4a75-adc0-7b9bc26a232b' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='d8e71860-0b0d-4637-8ade-6f085ee2a8d9' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='0626417b-a668-40bb-9568-8bc1684d7bf6' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='386b18b6-6392-4140-99dd-15669df40329' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+    <linearGradient y1='0.0%' x1='0.0%' y2='100.0%' x2='0.0%' id='2a46631f-d141-4d65-bb46-a7b5f9dc865f' spreadMethod='pad'>
+      <stop stop-opacity='1' offset='0' stop-color='rgb(255, 255, 255)'/>
+      <stop stop-opacity='1' offset='100' stop-color='rgb(238, 238, 238)'/>
+    </linearGradient>
+  </defs>
+  <desc>UsecaseDiagram</desc>
+  <g transform='translate(68.0,507.0)' id='_-N3pq7GeEDqaEtWqhKmuxA'>
+    <circle r='6.5' cx='20.0' cy='8.5' stroke-width='1.5' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <line y1='15.0' x1='20.0' y2='45.5' x2='20.0' stroke-width='1.5' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <line y1='26.0' x1='6.0' y2='26.0' x2='34.0' stroke-width='1.5' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <line y1='45.5' x1='20.0' y2='63.0' x2='9.2' stroke-width='1.5' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <line y1='45.5' x1='20.0' y2='63.0' x2='30.799999999999997' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <text text-anchor='middle' x='20.0' y='78.0' font-size='13' font-style='normal' fill='rgb(0, 0, 0)'>Hotelier</text>
+  </g>
+  <g transform='translate(1315.0,584.0)' id='_-q6uALHKEDqMEfvq1G_fdQ'>
+    <circle r='6.5' cx='20.0' cy='8.5' stroke-width='1.5' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <line y1='15.0' x1='20.0' y2='45.5' x2='20.0' stroke-width='1.5' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <line y1='26.0' x1='6.0' y2='26.0' x2='34.0' stroke-width='1.5' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <line y1='45.5' x1='20.0' y2='63.0' x2='9.2' stroke-width='1.5' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <line y1='45.5' x1='20.0' y2='63.0' x2='30.799999999999997' fill='rgb(255, 255, 255)' stroke='rgb(136, 136, 136)' look='allInOne'/>
+    <text text-anchor='middle' x='20.0' y='78.0' font-size='13' font-style='normal' fill='rgb(0, 0, 0)'>Admin</text>
+  </g>
+  <g transform='translate(181.0,110.0)' id='_JQM5MLGgEDqaEtWqhKmuxA'>
+    <rect x='0.0' width='97.0px' y='0.0' stroke-width='1.0' fill='url(#2e290177-bbda-46e8-b578-0b5dc502c401)' stroke='rgb(194, 183, 159)' look='allInOne' height='24.0px'/>
+    <rect x='0.0' width='1050.0px' y='24.0' stroke-width='1.0' fill='url(#2e290177-bbda-46e8-b578-0b5dc502c401)' stroke='rgb(194, 183, 159)' look='allInOne' height='910.0px'/>
+    <text font-weight='bold' text-anchor='middle' x='48.5' y='18.0' font-size='13' fill='rgb(128, 98, 33)'>Control panel</text>
+  </g>
+  <g transform='translate(221.0,172.0)' id='_mUCmYLGhEDqaEtWqhKmuxA'>
+    <ellipse cx='60.0' cy='36.0' rx='60.0' ry='36.0' stroke-width='1.0' fill='url(#477c3fa2-c917-4f13-97fe-70a30ca4cc44)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,29.5)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='60.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>Check-out</text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(746.0,174.0)' id='_mnUHsLGhEDqaEtWqhKmuxA'>
+    <ellipse cx='61.0' cy='35.5' rx='61.0' ry='35.5' stroke-width='1.0' fill='url(#669844e4-f827-4fdc-bfc6-ef4009676113)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,29.0)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='61.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>Check-in</text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(462.0,181.0)' id='_m3FpELGhEDqaEtWqhKmuxA'>
+    <ellipse cx='50.0' cy='27.5' rx='50.0' ry='27.5' stroke-width='1.0' fill='url(#e843036e-994a-42ca-8e4a-6790466688f4)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,21.0)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='50.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>Login</text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(427.0,502.0)' id='_v3wYULGhEDqaEtWqhKmuxA'>
+    <ellipse cx='85.0' cy='45.0' rx='85.0' ry='45.0' stroke-width='1.0' fill='url(#413fb6c5-be7c-46d2-be40-7249c6b999f5)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,38.5)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='85.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>Room list visualization</text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(717.0,507.0)' id='_K7-MkLGiEDqaEtWqhKmuxA'>
+    <ellipse cx='90.0' cy='40.0' rx='90.0' ry='40.0' stroke-width='1.0' fill='url(#4c917286-459f-47e4-af42-38522af2e603)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,33.5)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='90.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>Available room selection</text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(433.0,645.0)' id='_pbu6obGiEDqaEtWqhKmuxA'>
+    <ellipse cx='80.0' cy='45.0' rx='80.0' ry='45.0' stroke-width='1.0' fill='url(#5777a9ff-8760-45fd-940f-228d4c5661de)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,38.5)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='80.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>Room&apos;s data visualization</text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(329.0,773.0)' id='_5mhuQrGiEDqaEtWqhKmuxA'>
+    <ellipse cx='80.0' cy='45.0' rx='80.0' ry='45.0' stroke-width='1.0' fill='url(#df13bf3b-96cd-474a-96c7-5ab3bd67cba1)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,38.5)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='80.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>Current guest</text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(551.0,773.0)' id='_-yIQcrGiEDqaEtWqhKmuxA'>
+    <ellipse cx='80.0' cy='45.0' rx='80.0' ry='45.0' stroke-width='1.0' fill='url(#d6ad1f27-20f9-4b2c-b81f-4009062f54d0)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,38.5)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='80.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>Historical</text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(732.0,645.0)' id='_Sk-6cLGkEDqaEtWqhKmuxA'>
+    <ellipse cx='85.0' cy='45.0' rx='85.0' ry='45.0' stroke-width='1.0' fill='url(#b860bd40-26a1-4f2f-b313-2b93a55b62fe)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,38.5)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='85.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>Real-time data visualization </text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(312.0,925.0)' id='_Hu2o8LGlEDqaEtWqhKmuxA'>
+    <ellipse cx='95.0' cy='45.0' rx='95.0' ry='45.0' stroke-width='1.0' fill='url(#0e6e6cf9-d9b9-4deb-a011-0b3ef518b56e)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,38.5)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='95.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>Score visualization</text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(765.0,798.0)' id='_Wp6TALGlEDqaEtWqhKmuxA'>
+    <polygon stroke-width='0.5' fill='rgb(255, 255, 255)' stroke='rgb(107, 107, 107)' look='allInOne' points='0.0,0.0 0.0,40.0 130.0,40.0 130.0,15.0 115.0,0.0'/>
+    <polygon stroke-width='1.0' fill='rgb(107, 107, 107)' look='border' stroke='rgb(107, 107, 107)' points='115.0,1.0 115.0,15.0 129.0,15.0'/>
+    <clipPath id='clip_Wp6TALGlEDqaEtWqhKmuxA'>
+      <rect x='5.0' width='105.0px' y='5.0' height='30.0px'/>
+    </clipPath>
+    <g transform='translate(0.0,0.0)'>
+      <text clip-path='url(#clip_Wp6TALGlEDqaEtWqhKmuxA)' x='5.0' y='18.0' font-size='13' fill='rgb(45, 45, 45)'>group by guest</text>
+    </g>
+  </g>
+  <g transform='translate(1003.0,347.0)' id='__2kBwLHKEDqMEfvq1G_fdQ'>
+    <ellipse cx='80.0' cy='40.0' rx='80.0' ry='40.0' stroke-width='1.0' fill='url(#6a6617f7-5ef2-4cbc-a4f5-4bac0bb11240)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,33.5)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='80.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>Add new hotel</text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(988.0,174.0)' id='_W6hsobHLEDqMEfvq1G_fdQ'>
+    <ellipse cx='95.0' cy='51.0' rx='95.0' ry='51.0' stroke-width='1.0' fill='url(#e805c485-c8f7-436b-bb94-f17dc5b6fade)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,44.5)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='95.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>Hotelier account generation</text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(1013.0,488.0)' id='_pFExgLHLEDqMEfvq1G_fdQ'>
+    <ellipse cx='70.0' cy='45.0' rx='70.0' ry='45.0' stroke-width='1.0' fill='url(#d35474b7-43b3-497f-9870-dac7c640ee33)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,38.5)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='70.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>Add hotel&apos;s rooms</text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(993.0,685.0)' id='_s9FvcLHMEDqMEfvq1G_fdQ'>
+    <ellipse cx='90.0' cy='50.0' rx='90.0' ry='50.0' stroke-width='1.0' fill='url(#f8932e0b-e67f-4011-bc9f-5791044a9bbf)' stroke='rgb(187, 187, 187)' look='allInOne'/>
+    <g transform='translate(0.0,43.5)'>
+      <g transform='translate(0.0,0.0)'>
+        <text font-weight='bold' text-anchor='middle' x='90.0' y='13.0' font-size='13' fill='rgb(3, 54, 86)'>Control Unit and room binding</text>
+      </g>
+    </g>
+  </g>
+  <g transform='translate(121.0,393.0)' id='_mUNlgLGhEDqaEtWqhKmuxA'/>
+  <g transform='translate(364.0,403.0)' id='_mndRoLGhEDqaEtWqhKmuxA'/>
+  <text text-anchor='middle' x='386.0' y='188.0' fill='rgb(0, 0, 0)'>« include »</text>
+  <text text-anchor='middle' x='655.0' y='190.0' fill='rgb(0, 0, 0)'>« include »</text>
+  <g transform='translate(172.0,562.0)' id='_I7jM8LGiEDqaEtWqhKmuxA'/>
+  <text text-anchor='middle' x='652.0' y='568.0' fill='rgb(0, 0, 0)'>« extend »</text>
+  <text text-anchor='middle' x='848.0' y='387.0' fill='rgb(0, 0, 0)'>« include »</text>
+  <text text-anchor='middle' x='562.0' y='378.0' fill='rgb(0, 0, 0)'>« include »</text>
+  <text text-anchor='middle' x='649.0' y='710.0' fill='rgb(0, 0, 0)'>« include »</text>
+  <text text-anchor='middle' x='451.0' y='899.0' fill='rgb(0, 0, 0)'>« extend »</text>
+  <text text-anchor='middle' x='558.0' y='629.0' fill='rgb(0, 0, 0)'>« extend »</text>
+  <text text-anchor='middle' x='1009.0' y='319.0' fill='rgb(0, 0, 0)'>« include »</text>
+  <g transform='translate(1163.0,531.0)' id='_eOJrQLHLEDqMEfvq1G_fdQ'/>
+  <text text-anchor='middle' x='1013.0' y='463.0' fill='rgb(0, 0, 0)'>« extend »</text>
+  <g transform='translate(898.0,637.0)' id='_1OHKcLHMEDqMEfvq1G_fdQ'/>
+  <g transform='translate(1139.0,679.0)' id='_7TM5YLHMEDqMEfvq1G_fdQ'/>
+  <g id='_GT1HoLBAEDqB7-Hd-h84Sw'>
+    <line y1='244.0' x1='260.0' y2='511.0' x2='108.0' id='_mUHe4bGhEDqaEtWqhKmuxA' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+  </g>
+  <g id='_CW6mILBAEDqB7-Hd-h84Sw'>
+    <line y1='537.0' x1='108.0' y2='238.0' x2='746.0' id='_mnZnQbGhEDqaEtWqhKmuxA' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+  </g>
+  <g id='_F0MI0LBBEDqB7-Hd-h84Sw'>
+    <line y1='208.0' x1='341.0' y2='208.0' x2='462.0' stroke-dasharray='7, 3' id='_m3TrgLGhEDqaEtWqhKmuxA' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+    <polyline transform='translate(462.0,208.0) rotate(90.0)' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)' points='-5.0,10.0 0.0,0.0 5.0,10.0'/>
+  </g>
+  <g id='_gNQjwLBAEDqB7-Hd-h84Sw'>
+    <line y1='209.0' x1='746.0' y2='209.0' x2='562.0' stroke-dasharray='7, 3' id='_m3bAQbGhEDqaEtWqhKmuxA' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+    <polyline transform='translate(562.0,209.0) rotate(-90.0)' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)' points='-5.0,10.0 0.0,0.0 5.0,10.0'/>
+  </g>
+  <g id='_I7WYoLGiEDqaEtWqhKmuxA'>
+    <line y1='547.0' x1='108.0' y2='547.0' x2='427.0' id='_I7bRIbGiEDqaEtWqhKmuxA' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+  </g>
+  <g id='_NcEx0LGiEDqaEtWqhKmuxA'>
+    <line y1='547.0' x1='717.0' y2='547.0' x2='597.0' stroke-dasharray='7, 3' id='_NcMtoLGiEDqaEtWqhKmuxA' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+    <polyline transform='translate(597.0,547.0) rotate(-90.0)' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)' points='-5.0,10.0 0.0,0.0 5.0,10.0'/>
+  </g>
+  <g id='_PPJR8LGiEDqaEtWqhKmuxA'>
+    <line y1='245.0' x1='807.0' y2='507.0' x2='807.0' stroke-dasharray='7, 3' id='_PPLHIrGiEDqaEtWqhKmuxA' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+    <polyline transform='translate(807.0,507.0) rotate(-180.0)' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)' points='-5.0,10.0 0.0,0.0 5.0,10.0'/>
+  </g>
+  <g id='_X22HkLGiEDqaEtWqhKmuxA'>
+    <line y1='502.0' x1='512.0' y2='236.0' x2='512.0' stroke-dasharray='7, 3' id='_X238wrGiEDqaEtWqhKmuxA' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+    <polyline transform='translate(512.0,236.0) rotate(-0.0)' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)' points='-5.0,10.0 0.0,0.0 5.0,10.0'/>
+  </g>
+  <g id='_DoK84LGkEDqaEtWqhKmuxA'>
+    <line y1='773.0' x1='461.0' y2='754.0' x2='461.0' id='_DoPOUbGkEDqaEtWqhKmuxA' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+  </g>
+  <g id='_DoK84LGkEDqaEtWqhKmuxA'>
+    <line y1='754.0' x1='461.0' y2='754.0' x2='461.0' id='_DoP1YLGkEDqaEtWqhKmuxA' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+  </g>
+  <g id='_DoK84LGkEDqaEtWqhKmuxA'>
+    <line y1='754.0' x1='461.0' y2='735.0' x2='461.0' id='_DoQccLGkEDqaEtWqhKmuxA' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+    <polygon transform='translate(461.0,735.0) rotate(-0.0)' stroke-width='1.0' fill='rgb(255, 255, 255)' stroke='rgb(0, 0, 0)' points='-6.0,10.0 0.0,0.0 6.0,10.0'/>
+  </g>
+  <g id='_D_hF4LGkEDqaEtWqhKmuxA'>
+    <line y1='773.0' x1='572.0' y2='754.0' x2='572.0' id='_D_jiIrGkEDqaEtWqhKmuxA' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+  </g>
+  <g id='_D_hF4LGkEDqaEtWqhKmuxA'>
+    <line y1='754.0' x1='572.0' y2='754.0' x2='572.0' id='_D_kJMLGkEDqaEtWqhKmuxA' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+  </g>
+  <g id='_D_hF4LGkEDqaEtWqhKmuxA'>
+    <line y1='754.0' x1='572.0' y2='735.0' x2='572.0' id='_D_kJMbGkEDqaEtWqhKmuxA' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+    <polygon transform='translate(572.0,735.0) rotate(-0.0)' stroke-width='1.0' fill='rgb(255, 255, 255)' stroke='rgb(0, 0, 0)' points='-6.0,10.0 0.0,0.0 6.0,10.0'/>
+  </g>
+  <g id='_arsi4LGkEDqaEtWqhKmuxA'>
+    <line y1='690.0' x1='593.0' y2='690.0' x2='732.0' stroke-dasharray='7, 3' id='_aruYELGkEDqaEtWqhKmuxA' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+    <polyline transform='translate(732.0,690.0) rotate(90.0)' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)' points='-5.0,10.0 0.0,0.0 5.0,10.0'/>
+  </g>
+  <g id='_LqW1MLGlEDqaEtWqhKmuxA'>
+    <line y1='925.0' x1='407.0' y2='863.0' x2='408.0' stroke-dasharray='7, 3' id='_LqbGorGlEDqaEtWqhKmuxA' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+    <polyline transform='translate(408.0,863.0) rotate(0.9240453527727062)' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)' points='-5.0,10.0 0.0,0.0 5.0,10.0'/>
+  </g>
+  <line y1='818.0' x1='711.0' y2='818.0' x2='765.0' stroke-dasharray='1, 2' id='_Z67X0bGlEDqaEtWqhKmuxA' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+  <g id='_3eVyYLGlEDqaEtWqhKmuxA'>
+    <line y1='645.0' x1='512.0' y2='592.0' x2='512.0' stroke-dasharray='7, 3' id='_3eZcwrGlEDqaEtWqhKmuxA' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+    <polyline transform='translate(512.0,592.0) rotate(-0.0)' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)' points='-5.0,10.0 0.0,0.0 5.0,10.0'/>
+  </g>
+  <g id='_amCVELHLEDqMEfvq1G_fdQ'>
+    <line y1='347.0' x1='1083.0' y2='276.0' x2='1083.0' stroke-dasharray='7, 3' id='_amExULHLEDqMEfvq1G_fdQ' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+    <polyline transform='translate(1083.0,276.0) rotate(-0.0)' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)' points='-5.0,10.0 0.0,0.0 5.0,10.0'/>
+  </g>
+  <g id='_eN4lgLHLEDqMEfvq1G_fdQ'>
+    <line y1='605.0' x1='1315.0' y2='427.0' x2='1125.0' id='_eN-FEbHLEDqMEfvq1G_fdQ' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+  </g>
+  <g id='_tkHvsLHLEDqMEfvq1G_fdQ'>
+    <line y1='488.0' x1='1083.0' y2='427.0' x2='1083.0' stroke-dasharray='7, 3' id='_tkMBIrHLEDqMEfvq1G_fdQ' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+    <polyline transform='translate(1083.0,427.0) rotate(-0.0)' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)' points='-5.0,10.0 0.0,0.0 5.0,10.0'/>
+  </g>
+  <g id='_1N4g8LHMEDqMEfvq1G_fdQ'>
+    <line y1='623.0' x1='1315.0' y2='620.0' x2='660.0' id='_1N9ZcLHMEDqMEfvq1G_fdQ' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+  </g>
+  <g id='_1N4g8LHMEDqMEfvq1G_fdQ'>
+    <line y1='620.0' x1='660.0' y2='589.0' x2='597.0' id='_20pqcLHMEDqMEfvq1G_fdQ' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+  </g>
+  <g id='_7S-28LHMEDqMEfvq1G_fdQ'>
+    <line y1='632.0' x1='1315.0' y2='695.0' x2='1173.0' id='_7TDvcLHMEDqMEfvq1G_fdQ' stroke-width='1.0' fill='none' stroke='rgb(0, 0, 0)'/>
+  </g>
+</svg>
