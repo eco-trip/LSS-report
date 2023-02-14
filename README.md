@@ -12,3 +12,4 @@ il problema e la nostra soluzione.
 
 - [Contesto e obiettivo](src/context-goal.md)
 - [Knowledge krunching](src/knowledge-crunching.md)
+- [Requisiti di sistema](src/requirements.md)
