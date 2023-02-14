@@ -74,9 +74,9 @@ Come già mostrato nella sezione dello _strategic design_, la _control unit_
 comunica con il _bounded context_ relativo all'AWS IoT Core[^1] tramite uno
 livello di ACL. Quest'ultimo è stato implementato estendendo uno specifico
 _adapter_ (`OutputAdapter`) e sfruttando le funzionalità offerte dall'omonimo
-`SDK` di Amazon AWS. Nello specifico, la libreria si avvale del protocollo MQTT per
-l'invio delle rilevazioni e per avviare un processo di _shadowing_[^2] con cui
-monitorare la centralina.
+`SDK` di Amazon AWS. Nello specifico, la libreria si avvale del protocollo MQTT
+per l'invio delle rilevazioni e per avviare un processo di _shadowing_[^2] con
+cui monitorare la centralina.
 
 Infine, anche al lettore NFC è associato un determinato _adapter_ che permette
 di condividere con l'applicazione lato _guest_ (utente) il _token_ necessario
@@ -91,10 +91,10 @@ inviarli verso l'esterno è racchiusa all'interno della classe
 periodicamente (ogni 5 secondi) ed in maniera concorrente tutti i rilevamenti
 necessari (consumi e ambiente), interrompendoli in caso di superamento del
 _timeout_. Una volta ottenuti tutti i risultati, questi vengono prima
-serializzati grazie un’istanza di `Serializer` e successivamente comunicati verso
-l’esterno tramite l’`OutputAdapter`. Data la natura concorrente del servizio, si
-è scelto di schematizzarne il comportamento attraverso un diagramma di stato
-([@fig:room-monitoring]).
+serializzati grazie un’istanza di `Serializer` e successivamente comunicati
+verso l’esterno tramite l’`OutputAdapter`. Data la natura concorrente del
+servizio, si è scelto di schematizzarne il comportamento attraverso un diagramma
+di stato ([@fig:room-monitoring]).
 
 ![Diagramma di stato del _room monitoring service_](./images/room-monitoring-service.jpeg){#fig:room-monitoring}
 
