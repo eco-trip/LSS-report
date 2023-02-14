@@ -3,8 +3,7 @@
 ### TODO
 
 - dependabot
-- report repo
-- migliorare conclusione
+- report repo da md a pdf
 
 ----
 
@@ -20,6 +19,9 @@ Di seguito una panoramica sull'organizzazione dei vari repository
 - [Control Unit](#control-unit): Repository per il software della centralina, che include tutto il codice necessario per la sua funzionalità.
 
 - [Ecotrip](#ecotrip): Repository che gestisce la parte del progetto basata su microservizi sul cloud. Include sottomoduli per ciascun servizio e verrà discussa successivamente.
+
+- Report ...
+
 #### Strategie di Version Control (globali)
 
 Per garantire la qualità e la tracciabilità del codice sviluppato, abbiamo adottato una rigorosa strategia di controllo di versione. 
