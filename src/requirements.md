@@ -24,7 +24,7 @@ Successivamente specifichiamo i requisiti non funzionali.
         1.2.2 Identificazione presenza ospite all'interno della stanza (opzionale)
         1.2.3 Aggregazione dati campionati ogni 5 secondi
             1.2.3.1 Calcolo del consumo energetico
-            1.2.3.1 Calcolo del consumo di acqua
+            1.2.3.2 Calcolo del consumo di acqua
         1.2.4 Invio ogni 5 secondi dei dati rilevati ed aggregati a piattaforma cloud
 
     1.3 Guest Authorization
