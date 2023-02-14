@@ -1,5 +1,14 @@
 # DevOps
 
+### TODO
+
+- dependabot
+- report repo
+- migliorare conclusione
+
+----
+
+
 Nella realizzazione di un progetto software, la gestione del codice sorgente e il processo di continuous integration and continuous delivery (CI/CD) sono elementi fondamentali per garantire una efficace collaborazione tra i membri del team e un deployment affidabile e rapido delle funzionalità implementate. 
 
 In questo paragrafo verrà descritta l'organizzazione del progetto e le relative pratiche DevOps, dal lavoro di squadra alla distribuzione del software.
@@ -199,6 +208,8 @@ Utilizzando `Docker Compose`, abbiamo emulato le due Applicazioni (**App** e **C
 
 SAM (`Serverless Application Model`) è un framework opensource che attraverso modelli permette di descrivere l'architettura cloud da creare e gestire. SAM è stato progettato per semplificare la creazione e la gestione di applicazioni serverless utilizzando CloudFormation, senza dover accedere manualmente alle interfacce di gestione di AWS.
 
+Abbiamo optato per questa soluzione , benché fosse possibile emulare l'intera infrastruttura in locale utilizzando l'immagine di Docker di [LocalStack](https://hub.docker.com/r/localstack/localstack) in quanto considerata obsoleta. La soluzione basata su LocalStack, che consente di emulare l'infrastruttura su AWS in locale tramite Docker, è stata scartata perché presenta servizi e versioni più vecchie rispetto a quelle disponibili su AWS ed alcune funzionalità potrebbero non funzionare correttamente o avere limitazioni. Pertanto, abbiamo optato per una soluzione ibrida che ci permetta di sfruttare al massimo i servizi e le funzionalità più recenti disponibili su AWS con la conferma che una volta in "production" tutto funzioni come da aspettative, avendo utilizzato gli stessi esatti ambienti.
+
 Per iniziare a lavorare, sarà sufficiente scaricare il repository principale e avviare uno script di [setup](https://github.com/eco-trip/Ecotrip/blob/release/setup.sh). 
 
 ```sh
@@ -228,4 +239,6 @@ L'ambiente di staging è una replica fedele dell'ambiente di produzione, che vie
 #### Script di deploy
 
 Abbiamo standardizzato l'utilizzo di una cartella `deploy` all'interno di ogni repository del progetto per facilitare il processo di deploy dell'infrastruttura su AWS. In questa cartella è presente uno script specifico per il **deploy** e uno per il **destroy** dell'infrastruttura. Lo script utilizza i segreti presenti su AWS, crea il template SAM e avvia lo stack Cloud Formation. La variabile "-e" permette di specificare se l'ambiente è "dev", "staging" o "production". Questi script possono essere eseguiti manualmente dalla console, se si hanno i permessi, o automaticamente dalle GitHub Actions.
+
+
 	
