@@ -112,7 +112,7 @@ Inoltre vengono adottati meccanismi RBAC per autorizzare l'esecuzione delle tran
 
 Riportiamo in [@er-administration] un semplice diagramma ER che modella i dati.
 
-![Diagramma ER di _Administration_.](./images/er-admin.png){#fig:er-administration}
+![Diagramma ER di _Administration_.](./images/er-admin.jpg){#fig:er-administration}
 
 ## AWS IoT Core
 
@@ -120,7 +120,7 @@ Questo componente è delegato all'omonimo servizio Amazon, qui riportiamo
 solamente in [@fig:er-iot] la definizione della tabella per storicizzare i dati
 inviati delle centraline.
 
-![Modello dati di _AWS IoT Core_.](./images/er-iot.png){#fig:er-iot}
+![Modello dati di _AWS IoT Core_.](./images/er-iot.jpg){#fig:er-iot}
 
 ## Data Elaboration
 
@@ -132,7 +132,7 @@ un'unica rotta che richiede un token di accesso Cognito o fornito da `Guest
 Authorization`. Maggiori dettagli per comprendere la progettazione di questo
 componente sono specificati nel capitolo relativo al DevOps / deployment. Riportiamo in [@fig:data-elaboration] la definizione della tabella per storicizzare i dati elaborati.
 
-![Modello dati di _Data Elaboration_.](./images/er-elaboration.png){#fig:data-elaboration}
+![Modello dati di _Data Elaboration_.](./images/er-elaboration.jpg){#fig:data-elaboration}
 
 ## Guest Authorization
 
